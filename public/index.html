@@ -23,4 +23,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
   </body>
+
+  <script>
+    $(function(){   
+      var nav = $('#menuHeader');   
+      $(window).scroll(function () { 
+        if ($(this).scrollTop() > 150) { 
+          nav.addClass("menu-fixo");
+          $('body').css('padding-top', 70);
+        } else { 
+          nav.removeClass("menu-fixo"); 
+          $('body').css('padding-top', 0);
+        } 
+      });  
+    });
+  </script>
 </html>
+
