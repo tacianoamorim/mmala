@@ -1,5 +1,4 @@
 <template>
-
   <div id="app">
     <main class="main">
 
@@ -8,36 +7,26 @@
         <div class="container">
           <div class="row">
             <div class="col-2"><img src="./assets/img/logo.png" height="50" width="200"></div>
-            <div class="col-7"></div>
-            <div class="col-3">
+            <div class="col-5"></div>
+            <div class="col-5">
+              <router-link to="/">Home</router-link> |
+              <router-link to="/about">About</router-link>            
               <button type="button" style="background-color: #6B7A8F;" onclick="$('.alert').alert('close')" 
-              class="btn btn-info btn-sm">AVALIE SUA ORGANIZAÇÃO</button>
+              class="btn btn-info btn-sm">AVALIE SUA ORGANIZA��O</button>
             </div>                   
           </div>
         </div> 
       </nav>
-          
-      <Main/>
     </main>
-
+    
+    <router-view/>
+    
     <!-- FOOTER -->
     <footer>
-        <p>© 2020 - Todos os direitos reservados</p>
-    </footer>    
+        <p>� 2020 - Todos os direitos reservados</p>
+    </footer>  
   </div>
 </template>
-
-<script>
-import Main from './components/Main.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Main
-  }
-}
-
-</script>
 
 <style>
 .menu-fixo {
@@ -77,7 +66,7 @@ nav {
 }
 
 .header {
-  position: -webkit-sticky; /* Necessário para funcionar no Safari */
+  position: -webkit-sticky; /* Necess�rio para funcionar no Safari */
   position: sticky;
   top: 0;
 }
