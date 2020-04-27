@@ -1,30 +1,28 @@
 <template>
-  <div id="app">
-    <main class="main">
+  <div id="app-5">
+    <main class="main">  
 
       <!-- TOPO -->
       <nav id="menuHeader">
         <div class="container">
           <div class="row">
-            <div class="col-2"><img src="./assets/img/logo.png" height="50" width="200"></div>
-            <div class="col-5"></div>
+            <div class="col-2"><router-link to="/"><img src="./assets/img/logo.png" height="50" width="200"></router-link>  </div>
             <div class="col-5">
-              <router-link to="/">Home</router-link> |
-              <router-link to="/about">About</router-link>            
-              <button type="button" style="background-color: #6B7A8F;" onclick="$('.alert').alert('close')" 
-              class="btn btn-info btn-sm">AVALIE SUA ORGANIZA��O</button>
+              <p>{{ message }}</p>
+            </div>
+            <div class="col-5">
+              <router-link to="/formulario" class="btn btn-info btn-sm" 
+                style="background-color: #6B7A8F;">Evaluate your Organization</router-link>
             </div>                   
           </div>
         </div> 
-      </nav>
-    </main>
-    
-    <router-view/>
-    
+      </nav>        
+      <router-view/>
+    </main>    
     <!-- FOOTER -->
     <footer>
-        <p>� 2020 - Todos os direitos reservados</p>
-    </footer>  
+        <p>© 2020 - All rights reserved</p>
+    </footer>    
   </div>
 </template>
 
@@ -46,58 +44,20 @@ body {
   text-align: center;
   color: #2c3e50;
 }
-* {
-  font-family: 'Raleway',sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
-nav {
- margin: 0px;
- margin-top: 0px;
- padding: 0;
- position: fixed;
- top: 0; 
- width:100%;
- height:59px;
- background-image: linear-gradient(to bottom, #2c2c2c, #181818);
-     /* box-shadow: inset 0px 3px rgba(255,255,255,0.03), inset 0px -4px rgba(0,0,0,0.2), 0px 4px rgba(0,0,0,0.05); */
- list-style:none;
+body {
+  margin: 0;
+  padding: 0;  
+  font-size: 28px;
+  font-family: 'Raleway', sans-serif, Arial, Helvetica;
 }
 
 .header {
-  position: -webkit-sticky; /* Necess�rio para funcionar no Safari */
-  position: sticky;
-  top: 0;
-}
-h4 {
-  padding: 13px;
-}
-.menu {
-  background-color: #666666;
+  background-color: #f1f1f1;
+  padding: 30px;
   text-align: center;
 }
-.menu ul li {
-  display: inline-block;
-}
-.menu ul li a {
-  display: block;
-  color: #FFFFFF;
-  padding: 30px 10px;
-}
-.main {
-    padding: 5px 0;
-}
-.content {
-  width: 80%;
-  margin: auto;
-  padding: 30px;
-  background-color: #eff0f1;
-  height: 1000px;
-}
-.content h1 {
-  margin-bottom: 30px;
-}
+
 footer {
   background-color: #6B7A8F;
   padding: 1px;
@@ -117,5 +77,4 @@ footer p {
 button {
   font-size: small !important;
 }
-
 </style>

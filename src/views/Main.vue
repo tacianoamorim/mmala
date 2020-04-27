@@ -1,17 +1,17 @@
 <template>
 
   <div>
-    <section class="navbar" style="height: 100vh">
+    <section class="navbar secMMLAA" style="height: 100vh">
       <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
         <div id="divLateral">
           <h1>
-            O Modelo de Maturidade para Adoção de Learning Analytics (MMALA) é 
-            um guia que dá suporte à adoção de Learning Analytics nas instituições 
-            de Ensino Superior.
+            The Maturity Model for Learning Analytics Adoption (MMLAA) is a guide 
+            that supports the adoption of Learning Analytics in Higher Education 
+            institutions.
           </h1>
         </div>
         <div id="divA">
-            <img src="../assets/img/engineering2.png" height="453" width="365">
+            <img src="../assets/img/engineering2.png" height="433" width="345">
         </div>
       </div>
     </section>    
@@ -118,8 +118,8 @@
      <div class="row featurette">
         <div class="col-md-7 order-md-2">
           <p class="texto textoEscuro">
-            Conheça o <span class="mmala">MMALA</span> e entenda os benefícios que sua instituição 
-            pode obter com a sua utilização.
+            Get to know <span class="mmala">MMALA</span> and understand the 
+            benefits that your institution can obtain with its use.
           </p>
         </div>
         <div class="col-md-5 order-md-1">
@@ -135,7 +135,7 @@
 p { 
   text-align: justify; 
 }
-.navbar {
+.secMMLAA {
   background-color: #F7C331!important;
 }
 section {
