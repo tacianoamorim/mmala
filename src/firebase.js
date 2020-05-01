@@ -11,9 +11,10 @@ const config = {
     appId: "1:973785344258:web:0825a85c7930a8ed9afa1b"
   };
 
-const firebaseApp = firebase.initializeApp(config)
+const firebaseApp = firebase.initializeApp(config);
 
-const firestore = firebaseApp.firestore()
-firestore.settings({ timestampsInSnapshots: true })
+const firestore = firebaseApp.firestore();
+//firestore.settings({ timestampsInSnapshots: true });
+//firestore.setLogLevel("debug");
 
 export default firestore

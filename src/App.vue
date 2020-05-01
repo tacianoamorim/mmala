@@ -8,7 +8,6 @@
           <div class="row">
             <div class="col-2"><router-link to="/"><img src="./assets/img/logo.png" height="50" width="200"></router-link>  </div>
             <div class="col-5">
-              <p>{{ message }}</p>
             </div>
             <div class="col-5">
               <router-link to="/formulario" class="btn btn-info btn-sm" 
