@@ -21,11 +21,12 @@
         <div class="col-md-7 order-md-2">
           <h1 class="rotulo rotuloEscuro" >Categorias e Áreas de Processos</h1>
           <p class="texto textoEscuro">
-            O MMALA abrange as atividades necessárias para que a 
-            instituição possa evoluir na adoção de LA.</p>
+            The MMLAA covers the activities necessary for the institution to 
+            evolve in the adoption of LA.</p>
           <p class="texto textoEscuro">
-            O modelo é composto de 5 
-            Categorias, as quais compõem-se de Áreas de Processos.</p>
+            The model is composed of 5 Categories, which are made up 
+            of Process Areas.
+          </p>
             (aqui vem a tabela com as categorias e áreas de processos)
         </div>
         <div class="col-md-5 order-md-1">
@@ -36,26 +37,25 @@
 
     <section id="estrutura" style="background-color: #6B7A8F">
      <div class="row featurette">
-        <div class="col-md-5 order-md-1">
-          <h1 class="rotulo rotuloClaro" >Estrutura</h1>
+        <div class="col-md-12">
+          <h1 class="rotulo rotuloClaro" >Structure</h1>
           <p class="texto textoClaro" style="font-size: 18px">
-              As Área de Processos do modelo possuem uma estrutura fixa, composta pelo 
-              propósito geral dessa área, os objetivos que se deseja alcançar com a sua 
-              implementação, as áreas de processos a ela relacionadas, as práticas funcionais 
-              distribuídas em 4 níveis de maturidade e os produtos de trabalho resultantes 
-              da institucionalização dos processos em cada nível.  </p>
+            The Process Areas of the model have a fixed structure, composed of the
+            general purpose of that area, the objectives that one wishes to achieve with its
+            implementation, the areas of processes related to it, the functional practices
+            distributed over 4 maturity levels and the resulting work products
+            institutionalization of processes at each level.  
+          </p>
           <p class="texto textoClaro" style="font-size: 18px;">
-              O MMMALA foi concebido para permitir sua utilização de forma flexível e 
-              adaptável. Isto é, a instituição pode optar por concentrar-se em qualquer 
-              combinação de categorias ou áreas de processos, sendo as áreas de processos 
-              relacionadas um indicativo seguro daquelas áreas em que se recomenda a adoção 
-              conjunta.</p>
-              (aqui vem a imagem que já tem na home. Acredito até que pode ficar 
-              interessante usar esses textos que fiz na imagem para que ela tenha mais 
-              informações, ao invés desse texto ficar corrido ao lado da imagem).
-        </div>
-        <div class="col-md-7 order-md-2">
-          <img src="../assets/img/categoriaProcesso.png" style="margin-top: 50px" height="500" width="500">
+            The MMLAA was conceived to allow its use in a flexible and
+            adaptable. That is, the institution can choose to focus on any
+            combination of categories or process areas, the process areas being
+            a safe indication of those areas where adoption is recommended
+            joint.
+          </p>
+            (aqui vem a imagem que já tem na home. Acredito até que pode ficar 
+            interessante usar esses textos que fiz na imagem para que ela tenha mais 
+            informações, ao invés desse texto ficar corrido ao lado da imagem).
         </div>
       </div>      
     </section>
@@ -65,7 +65,10 @@
         <div class="col-md-7 order-md-2">
           <h1 class="rotulo rotuloEscuro">Área de Processo</h1>
           <p class="lead texto textoEscuro">
-            É composta pela descrição do seu propósito e objetivos, pelas áreas de processos relacionadas e por suas práticas funcionais (descritas em termos de níveis de 1 a 4).</p>
+            It consists of the description of its purpose and objectives, the
+            related process areas and their functional practices
+            (described in terms of levels 1 to 4).
+          </p>
         </div>
         <div class="col-md-5 order-md-1">
           <img src="../assets/img/areaProcesso.png" style="margin-top: 50px" height="500" width="500">
@@ -74,39 +77,44 @@
     </section>
 
     <section id="niveis" style="background-color: #6B7A8F">
-      <h1 class="rotulo rotuloClaro">Níveis de Maturidade</h1>
+      <h1 class="rotulo rotuloClaro">Maturity Levels</h1>
       
       <div class="container marketing">
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-3">
             <img src="../assets/img/numero1.png" style="margin-top: 10px" height="140" width="140">
-            <h3 style="color: #F7882F">Ad Hoc</h3>
+            <h3 style="color: #F7882F">Ad hoc</h3>
             <p class="left texto textoClaro" style="color: #F7882F;font-size: 10px;">
-              Os processos não estão estabelecidos, ocorrendo de modo desordenado. 
-              As atividades são realizadas sem planejamento prévio e envolve poucos 
-              pesquisadores e estudantes.</p>
+              The processes are not established, occurring in a disorderly manner.
+              Activities are carried out without prior planning and involve few
+              researchers and students.
+            </p>
           </div><!-- /.col-lg-3 -->
           <div class="col-lg-3">
             <img src="../assets/img/numero2.png" style="margin-top: 10px" height="140" width="140">
-            <h3 style="color: #F7882F">Inicial</h3>
+            <h3 style="color: #F7882F">Initial</h3>
             <p class="left texto textoClaro" style="color: #F7882F;font-size: 10px;">
-              Os processos começam a se formalizar, favorecendo a ampliação da 
-              utilização de LA na instituição. </p>
+              The processes begin to formalize, favoring the expansion of
+              use of LA in the institution.
+            </p>
           </div><!-- /.col-lg-3 -->
           <div class="col-lg-3">
             <img src="../assets/img/numero3.png" style="margin-top: 10px" height="140" width="140">
-            <h3 style="color: #F7882F">Estruturado</h3>
-            <p class="left texto textoClaro" style="color: #F7882F;font-size: 10px;">A instituição 
-              reconhece e dá suporte à adoção de LA, de modo que os processos são formalmente
-               estabelecidos e as responsabilidades de cada stakeholder são definidas.</p>
+            <h3 style="color: #F7882F">Structured</h3>
+            <p class="left texto textoClaro" style="color: #F7882F;font-size: 10px;">
+              The institution recognizes and supports the adoption of LA, 
+              so that the processes are formally established and the 
+              responsibilities of each stakeholder are defined.
+            </p>
           </div><!-- /.col-lg-3 -->
           <div class="col-lg-3">
             <img src="../assets/img/numero4.png" style="margin-top: 10px" height="140" width="140">
-            <h3 style="color: #F7882F">Sistemático</h3>
-            <p class="left texto textoClaro" style="color: #F7882F;font-size: 10px;">Há processos e políticas 
-              formalmente estabelecidos e seguidos, de modo que a adoção de LA se torna abrangente 
-              a toda instituição.</p>
+            <h3 style="color: #F7882F">Systematic</h3>
+            <p class="left texto textoClaro" style="color: #F7882F;font-size: 10px;">
+              There are processes and policies formally established and followed, 
+              so that the adoption of LA becomes comprehensive to the whole institution.
+            </p>
           </div><!-- /.col-lg-3 -->
         </div><!-- /.row -->
         <!-- START THE FEATURETTES -->
