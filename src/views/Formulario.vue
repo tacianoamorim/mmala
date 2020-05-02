@@ -261,12 +261,18 @@ h1 {
 }
 h4 {
   text-align: justify;
+  font-size: 1.5rem;
 }
 span {
   font-weight: bolder;
+  font-size: 1rem;
 }
 
 .align {
   text-align: justify;
+}
+
+i {
+  font-size: 1rem;
 }
 </style>
