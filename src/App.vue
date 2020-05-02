@@ -15,7 +15,7 @@
             </div>                   
           </div>
         </div> 
-      </nav>        
+      </nav>
       <router-view/>
     </main>    
     <!-- FOOTER -->

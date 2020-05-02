@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div id="app">
     <section class="navbar secMMLAA " style="height: 100vh">
       <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
         <div id="divLateral">
@@ -16,269 +16,257 @@
 
     <section>
      <div class="container">
-      <h1>Formulário</h1>
-      <form>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <label for="exampleFormControlInput1">1) Regarding the categories, inform the importance that each one has to suppotr the adoption of Learning Analytics.</label>
-            <fieldset class="form-group">
-              <div class="row">
+      <h1 >Search form</h1>
+      <form @submit.prevent="submit()">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>1) Regarding the categories, inform the importance that each one has to support the adoption of Learning Analytics.</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+               <div class="row">
                 <div class="col-sm-2"></div>                    
-                <div class="col-sm-2">Not important</div>       
-                <div class="col-sm-2">Slightly important</div>                    
-                <div class="col-sm-2">Moderately important</div> 
-                <div class="col-sm-2">Important</div>                    
-                <div class="col-sm-2">Very important</div>                                                                         
-              </div>                
-              <div class="row">
-                <div class="col-sm-2">Data Management</div>                    
-                <div class="col-sm-2">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" value="opcao1" checked>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
-                  </div>
-                </div>    
-                <div class="col-sm-2">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
-                  </div>
-                </div>                                                       
-              </div>
-            </fieldset>
-          </div>   
-        </div>
-       </div>
-       <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <fieldset class="form-group">
+                <div class="col-sm-2"><i>Not important</i></div>       
+                <div class="col-sm-2"><i>Slightly important</i></div>                    
+                <div class="col-sm-2"><i>Moderately important</i></div> 
+                <div class="col-sm-2"><i>Important</i></div>                    
+                <div class="col-sm-2"><i>Very important</i></div>                                                                         
+              </div> 
+              <fieldset class="form-group"> 
                 <div class="row">
-                  <div class="col-sm-2">Administration</div>                    
+                  <div class="col-sm-2 align"><span>Data Management</span></div>                    
                   <div class="col-sm-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao1" checked>
+                      <input class="form-check-input" type="radio" name="rb01DataManager" value="NI">
                     </div>
                   </div>
                   <div class="col-sm-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
+                      <input class="form-check-input" type="radio" name="rb01DataManager" value="SL">
                     </div>
                   </div>
                   <div class="col-sm-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
+                      <input class="form-check-input" type="radio" name="rb01DataManager" value="MI">
                     </div>
                   </div>    
                   <div class="col-sm-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
+                      <input class="form-check-input" type="radio" name="rb01DataManager" value="I">
                     </div>
                   </div>
                   <div class="col-sm-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
+                      <input class="form-check-input" type="radio" name="rb01DataManager" value="VI">
                     </div>
                   </div>                                                       
                 </div>
               </fieldset>
-            </div> 
-          </div>   
-        </div>        
-       <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <fieldset class="form-group">
-                <div class="row">
-                  <div class="col-sm-2">Pedagogical Su...</div>                    
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao1" checked>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
-                    </div>
-                  </div>    
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
-                    </div>
-                  </div>                                                       
-                </div>
-              </fieldset>
-            </div> 
-          </div>   
-        </div>  
-
-       <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <fieldset class="form-group">
-                <div class="row">
-                  <div class="col-sm-2">Data Analysis</div>                    
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao1" checked>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
-                    </div>
-                  </div>    
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
-                    </div>
-                  </div>                                                       
-                </div>
-              </fieldset>
-            </div> 
-          </div>   
-        </div>  
-       <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <fieldset class="form-group">
-                <div class="row">
-                  <div class="col-sm-2">Legislation, Private</div>                    
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao1" checked>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
-                    </div>
-                  </div>    
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao2">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" value="opcao3">
-                    </div>
-                  </div>                                                       
-                </div>
-              </fieldset>
-            </div> 
-          </div>   
-        </div>          
-
-        <div class="form-group row">
-          <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>   
           </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <fieldset class="form-group">
+                  <div class="row">
+                    <div class="col-sm-2 align"><span>Administration</span></div>                    
+                    <div class="col-sm-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rb01Administration" value="NI">
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rb01Administration" value="SL">
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rb01Administration" value="MI">
+                      </div>
+                    </div>    
+                    <div class="col-sm-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rb01Administration" value="I">
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rb01Administration" value="VI">
+                      </div>
+                    </div>                                                       
+                  </div>
+                </fieldset>
+              </div> 
+            </div>   
+          </div>        
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <fieldset class="form-group">
+                <div class="row">
+                  <div class="col-sm-2 align"><span>Pedagogical Support</span></div>                    
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01Pedagogical" value="NI">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01Pedagogical" value="SL">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01Pedagogical" value="MI">
+                    </div>
+                  </div>    
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01Pedagogical" value="I">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01Pedagogical" value="VI">
+                    </div>
+                  </div>                                                       
+                </div>
+              </fieldset>
+            </div> 
+          </div>   
+        </div>  
 
-      </form>
-     </div>
-     <div class="row ">
-        <div class="col-md-12">
-          <form @submit.prevent="addTodo(todo)">
-            <div class="col-7">
-              <input type="text" v-model="todo.description" class="form-input">
-            </div>
-            <div class="col-4">
-              <button class="btn btn-primary">Adicionar</button>
-            </div>
-          </form>
-      </div>  
-      <div class="col-md-12">  
-        {{ todos }}
-      </div>                    
-      <div class="row">
-        <div class="col-md-12">
-          <div class="todo-list">
-            <div class="title" v-for="t in todos" :key="t.id">
-              <div class="title-icon">
-                <i class="fas fa-camera"></i>
-              </div>
-              <div class="title-content">
-                <p class="title-substitle">{{t.description}}</p>
-              </div>     
-              <div class="title-action">
-                <button class="btn btn-primary">Concluido</button>
-                <button class="btn btn-danger">Remover</button>
-              </div>                         
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <fieldset class="form-group">
+                <div class="row">
+                  <div class="col-sm-2 align"><span>Data Analysis</span></div>                    
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01DataAnalysis" value="NI">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01DataAnalysis" value="SL">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01DataAnalysis" value="MI">
+                    </div>
+                  </div>    
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01DataAnalysis" value="I">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01DataAnalysis" value="VI">
+                    </div>
+                  </div>                                                       
+                </div>
+              </fieldset>
+            </div> 
+          </div>   
+        </div>  
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <fieldset class="form-group">
+                <div class="row">
+                  <div class="col-sm-2 align"><span>Legislation, Private and Ethics</span></div>                    
+                  <div class="col-sm-2">
+                    <div class="custom-control custom-radio mb-3">
+                      <input class="form-check-input" type="radio" name="rb01Legislation" value="NI">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01Legislation" value="SL">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01Legislation" value="MI">
+                    </div>
+                  </div>    
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01Legislation" value="I">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rb01Legislation" value="VI">
+                    </div>
+                  </div>                                                       
+                </div>
+              </fieldset>
+            </div> 
+          </div>   
+          </div>          
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-success btn-lg">Submit</button>
             </div>
           </div>
-        </div>  
-      </div>
-     </div>
-    </section>
-  </div>
+        </form>
+    </div>
+  </section>          
+</div>
 
 </template>
 
 <script>
-  export default {
-    name: "app",
-    data() {
-      return {
-        todos: [],
-        todo: {
-          checked: false
-        }
-      };
+import db from '../firebase'
+
+export default {
+  name: "app",
+  data: () => ({
+    categorias: [],    
+
+  }),
+  created() {
+    this.getData()
+  },
+  methods: {
+    getData() {
+      let self = this
+      console.log("getData()")
+      db.collection("categorias").get()
+        .then(function(querySnapshot) {
+          querySnapshot.forEach(function(doc) {
+            self.categorias.push(doc.data().descricao);
+        });
+      });
     },
-    methods: {
-      addTodo(todo) {
-        todo.id= Date.now();
-        this.todos.push(todo);
-        this.todo= { checked: false };
-        console.log("TESTES");
-      }
+    submit() {
+      console.log("submitCategoria")
     }
   }
+}
 </script>
 
 <style scoped>  
-  .todo-list {
-    padding-top: 2rem;
-  }
+h1 {
+  padding: 30px;
+  margin-top: 20px;
+}
+h4 {
+  text-align: justify;
+}
+span {
+  font-weight: bolder;
+}
+
+.align {
+  text-align: justify;
+}
 </style>
