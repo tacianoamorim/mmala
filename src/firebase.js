@@ -1,17 +1,18 @@
 import firebase from 'firebase'
+import 'firebase/auth'
+import 'firebase/storage'
+import 'firebase/database'
 import 'firebase/firestore'
 
-const config = {
-    apiKey: "AIzaSyBJo8KPUVv7WziBhh32Xl89nM0slUEMZtg",
-    authDomain: "mmala-c4994.firebaseapp.com",
-    databaseURL: "https://mmala-c4994.firebaseio.com",
-    projectId: "mmala-c4994",
-    storageBucket: "mmala-c4994.appspot.com",
-    messagingSenderId: "973785344258",
-    appId: "1:973785344258:web:0825a85c7930a8ed9afa1b"
-  };
-
-const firebaseApp = firebase.initializeApp(config);
+export const firebaseApp = firebase.initializeApp({
+  apiKey: process.env.VUE_APP_API_KEY,
+  authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+  databaseURL: process.env.VUE_APP_DATABASE_URL,
+  projectId: process.env.VUE_APP_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_APP_ID
+})
 
 const firestore = firebaseApp.firestore();
 //firestore.settings({ timestampsInSnapshots: true });
