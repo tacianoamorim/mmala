@@ -27,7 +27,6 @@
             The model is composed of 5 Categories, which are made up 
             of Process Areas.
           </p>
-            (aqui vem a tabela com as categorias e áreas de processos)
         </div>
         <div class="col-md-5 order-md-1">
           <img src="../assets/img/categoriaProcesso.png" style="margin-top: 50px" height="500" width="500">
@@ -148,6 +147,11 @@ p {
 }
 section {
   height: 100vh;
+}
+
+h1 {
+  padding-top: 30px;
+  padding-bottom: 60px;
 }
 
 /* DIV */
