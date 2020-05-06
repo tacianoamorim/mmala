@@ -1,6 +1,7 @@
 <template>
 
   <div id="app">
+
     <section class="navbar secMMLAA " style="height: 100vh">
       <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
         <div id="divLateral">
@@ -211,30 +212,74 @@
               </fieldset>
             </div> 
           </div>   
-          </div>          
+          </div> 
+          <div class="container">
+            <chart-container
+              v-if="loaded"
+              :chartdata="chartdata"
+              :options="options"/>
+          </div>     
+            
           <div class="row">
             <div class="col-md-12">
-              <button class="btn btn-success btn-lg">Submit</button>
+              <button class="btn btn-success btn-lg">Submit</button> 
+              <!--button type="button" @click="clear()" class="btn btn-danger btn-lg">Clear</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" 
+                data-target="#exampleModal">
+                  Launch demo modal
+              </button-->
             </div>
           </div>
         </form>
     </div>
-  </section>          
+  </section>    
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" 
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <div class="container">
+            <chart-container
+              v-if="loaded"
+              :chartdata="chartdata"
+              :options="options"/>
+          </div>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 </template>
 
 <script>
 import db from '../firebase'
+import ChartContainer from '../components/global/ChartContainer'
+import router from '../router'
 
 export default {
   name: "app",
   data: () => ({
-    categorias: [],    
-
+    loaded: false,
+    chartdata: [40, 20, 30, 50,80],
+    options: ['January', 'February', 'Março', 'Abril', 'Junho']
   }),
+  components: {
+    ChartContainer 
+  },  
   created() {
-    this.getData()
+    //this.getData()
   },
   methods: {
     getData() {
@@ -248,8 +293,16 @@ export default {
       });
     },
     submit() {
+      //router.push({ name: 'user', params: { userId: '123' } })
+      router.push({ name: 'Grafico', params: { id: '123' } })
       console.log("submitCategoria")
-    }
+
+    },
+    clear() {
+      router.push({ name: 'Cadastro', params: { id: '123' } })
+      console.log("clear")
+    }    
+
   }
 }
 </script>

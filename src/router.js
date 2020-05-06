@@ -3,11 +3,13 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-  const routes = [
+
+
+const routes = [
   {
     path: '/',
-    name: 'Main',
-    component:  () => import('./pages/Main.vue')
+    name: 'Principal',
+    component:  () => import('./pages/Principal.vue')
   },
   {
     path: '/formulario',
@@ -15,9 +17,16 @@ Vue.use(VueRouter)
     component: () => import('./pages/Formulario.vue')
   },
   {
-    path: '/cadastro',
+    path: '/cadastro/:id',
     name: 'Cadastro',
-    component:  () => import('./pages/Cadastro.vue')
+    component:  () => import('./pages/Cadastro.vue'),
+    props: true
+  },
+  {
+    path: '/grafico/:id',
+    name: 'Grafico',
+    component:  () => import('./pages/Grafico.vue'),
+    props: true
   } 
 ]
 
