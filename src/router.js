@@ -8,24 +8,30 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Principal',
-    component:  () => import('./pages/Principal.vue')
+    name: 'main',
+    component:  () => import('./pages/Main.vue')
   },
   {
-    path: '/formulario',
-    name: 'Formulario',
-    component: () => import('./pages/Formulario.vue')
+    path: '/form',
+    name: 'Form',
+    component: () => import('./pages/Form.vue')
   },
   {
-    path: '/cadastro/:id',
-    name: 'Cadastro',
-    component:  () => import('./pages/Cadastro.vue'),
+    path: '/register/:id',
+    name: 'Register',
+    component:  () => import('./pages/Register.vue'),
     props: true
   },
   {
-    path: '/grafico/:id',
-    name: 'Grafico',
-    component:  () => import('./pages/Grafico.vue'),
+    path: '/graphic/:pChartdata/:pOptions',
+    name: 'Graphic',
+    component:  () => import('./pages/Graphic.vue'),
+    props: true
+  },
+  {
+    path: '/model/:category',
+    name: 'Model',
+    component: () => import('./pages/Model.vue'),
     props: true
   } 
 ]

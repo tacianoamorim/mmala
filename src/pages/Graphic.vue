@@ -3,10 +3,11 @@
   <div id="grafico">
     <section>
      <div class="container">
+       <h1>{{pChartdata}} {{pOptions}}</h1>
       <div class="row align">
         <chart-container
-            :chartdata="chartdata"
-            :options="options"/>
+            :chartdata="pChartdata"
+            :options="pOptions"/>
       </div>  
       <button type="button" @click="newSearch()" class="btn btn-success btn-lg">New search</button>
     </div>
@@ -25,11 +26,12 @@ export default {
     ChartContainer
   },
   props: {
-    id: String
+    pChartdata: String, 
+    pOptions: String
   },  
   data: () => ({
-    chartdata: [40, 20, 30, 50,80],
-    options: ['January', 'February', 'Março', 'Abril', 'Junho']
+    chartdata: this.pChartdata.split(","),
+    options: this.pOptions.split(",")
   }),  
   methods: {
     newSearch() {

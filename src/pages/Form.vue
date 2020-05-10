@@ -2,7 +2,7 @@
 
   <div id="app">
 
-    <section class="navbar secMMLAA " style="height: 100vh">
+    <section class="navbar secMMALA " style="height: 100vh">
       <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
         <div id="divLateral">
           <h1>
@@ -29,11 +29,11 @@
             <div class="form-group">
                <div class="row">
                 <div class="col-sm-2"></div>                    
-                <div class="col-sm-2"><i>Not important</i></div>       
-                <div class="col-sm-2"><i>Slightly important</i></div>                    
-                <div class="col-sm-2"><i>Moderately important</i></div> 
-                <div class="col-sm-2"><i>Important</i></div>                    
-                <div class="col-sm-2"><i>Very important</i></div>                                                                         
+                <div class="col-sm-2"><i>1</i></div>       
+                <div class="col-sm-2"><i>2</i></div>                    
+                <div class="col-sm-2"><i>3</i></div> 
+                <div class="col-sm-2"><i>4</i></div>                    
+                <div class="col-sm-2"><i>5</i></div>                                                                         
               </div> 
               <fieldset class="form-group"> 
                 <div class="row">
@@ -213,96 +213,35 @@
             </div> 
           </div>   
           </div> 
-          <div class="container">
-            <chart-container
-              v-if="loaded"
-              :chartdata="chartdata"
-              :options="options"/>
-          </div>     
-            
+           
           <div class="row">
             <div class="col-md-12">
               <button class="btn btn-success btn-lg">Submit</button> 
-              <!--button type="button" @click="clear()" class="btn btn-danger btn-lg">Clear</button>
-              <button type="button" class="btn btn-primary" data-toggle="modal" 
-                data-target="#exampleModal">
-                  Launch demo modal
-              </button-->
             </div>
           </div>
         </form>
     </div>
   </section>    
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" 
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-         <div class="container">
-            <chart-container
-              v-if="loaded"
-              :chartdata="chartdata"
-              :options="options"/>
-          </div>  
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
 
 </template>
 
 <script>
-import db from '../firebase'
-import ChartContainer from '../components/global/ChartContainer'
 import router from '../router'
 
 export default {
   name: "app",
   data: () => ({
-    loaded: false,
-    chartdata: [40, 20, 30, 50,80],
-    options: ['January', 'February', 'Março', 'Abril', 'Junho']
+    chartdata: "40, 20, 30",
+    options: "January, February, Março"
   }),
-  components: {
-    ChartContainer 
-  },  
-  created() {
-    //this.getData()
-  },
   methods: {
-    getData() {
-      let self = this
-      console.log("getData()")
-      db.collection("categorias").get()
-        .then(function(querySnapshot) {
-          querySnapshot.forEach(function(doc) {
-            self.categorias.push(doc.data().descricao);
-        });
-      });
-    },
     submit() {
-      //router.push({ name: 'user', params: { userId: '123' } })
-      router.push({ name: 'Grafico', params: { id: '123' } })
-      console.log("submitCategoria")
-
+      router.push({ name: 'Graphic', params: { 
+        pChartdata: this.chartdata, 
+        pOptions: this.options 
+      } })
     },
-    clear() {
-      router.push({ name: 'Cadastro', params: { id: '123' } })
-      console.log("clear")
-    }    
-
   }
 }
 </script>
@@ -327,9 +266,10 @@ span {
 
 i {
   font-size: 1rem;
+  font-weight: bolder;
 }
 
-.secMMLAA {
+.secMMALA {
   background-color: #F7C331!important;
 }
 section {

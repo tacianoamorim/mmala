@@ -3,18 +3,18 @@ import { Radar } from 'vue-chartjs'
 
 export default {
   extends: Radar,
-data: () => ({
+  data: () => ({
     chartdata: {
       labels: ['January', 'February', 'Março', 'Abril', 'Junho'],
       datasets: [
         {
-          label: 'Data One',
-          data: [40, 20, 30, 50,80]
+          label: 'Chart01',
+          data: [1, 2, 3, 4]
         },
         {
-          label: 'Data dois',
+          label: 'Chart02',
           color: '#F7C331',
-          data: [10, 60, 90, 20, 85]
+          data: [1, 2, 3, 4]
         }        
       ]
     },

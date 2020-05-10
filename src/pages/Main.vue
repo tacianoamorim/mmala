@@ -1,11 +1,11 @@
 <template>
 
   <div>
-    <section class="navbar secMMLAA" style="height: 100vh">
+    <section class="navbar secMMALA" style="height: 100vh">
       <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
         <div id="divLateral">
           <h1>
-            The Maturity Model for Learning Analytics Adoption (MMLAA) is a guide 
+            The Maturity Model for the Adoption of Learning Analytics (MMALA) is a guide 
             that supports the adoption of Learning Analytics in Higher Education 
             institutions.
           </h1>
@@ -21,7 +21,7 @@
         <div class="col-md-7 order-md-2">
           <h1 class="label darkLabel">Categories and Process Areas</h1>
           <p class="text darkText">
-            The MMLAA covers the activities necessary for the institution to 
+            The MMALA covers the activities necessary for the institution to 
             evolve in the adoption of LA.</p>
           <p></p>
           <p class="text darkText">
@@ -30,7 +30,7 @@
           </p>
         </div>
         <div class="col-md-5 order-md-1">
-          <img src="../assets/img/categoriaProcesso.png" 
+          <img src="../assets/img/categoryProcessArea.png" 
             style="margin-top: 50px;margin-left: 50px;" 
             height="500" width="500">
         </div>
@@ -48,13 +48,13 @@
             distributed in 4 maturity levels and the results.
           </p>
           <p class="text darkText">
-            The MMLAA was designed to allow its use in a flexible and 
+            The MMALA was designed to allow its use in a flexible and 
             adaptable way. That is, the institution can choose to focus 
             on any combination of categories or process areas.
           </p>
         </div>
         <div class="col-md-5 order-md-2">
-          <img src="../assets/img/areaProcesso.png" style="margin-top: 50px" height="500" width="500">
+          <img src="../assets/img/category.png" style="margin-top: 50px" height="483" width="471">
         </div>
       </div>      
     </section>
@@ -64,7 +64,7 @@
       <h1 class="label darkLight">Maturity Levels</h1>
       <div style="text-align: center;">
         <img src="../assets/img/structured.png"              
-              height="385" width="607">
+              height="422" width="661">
       </div>
     </section>  
 
@@ -72,7 +72,7 @@
      <div class="row featurette" >
         <div class="col-md-7 order-md-2">
           <p class="text darkText" style="padding-top: 200px;">
-            Get to know <span class="mmala">MMLAA</span> and understand the 
+            Get to know <span class="mmala">MMALA</span> and understand the 
             benefits that your institution can obtain with its use.
           </p>
         </div>
@@ -85,11 +85,11 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 p { 
   text-align: justify; 
 }
-.secMMLAA {
+.secMMALA {
   background-color: #F7C331!important;
 }
 section {

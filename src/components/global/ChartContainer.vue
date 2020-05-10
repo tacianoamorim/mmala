@@ -18,7 +18,7 @@ export default {
   },
   data: () => ({
     loaded: false,
-    chartdata: [40, 20, 30, 50,80],
+    chartdata: [10, 20, 30, 40],
     options: ['January', 'February', 'Março', 'Abril', 'Junho']
   }),
   async mounted () {
