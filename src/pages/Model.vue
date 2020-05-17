@@ -1,66 +1,42 @@
 <template>
     <div id="app">
-        <div class="container">
+        <div class="container " id="printable">
             <div class="row topo" >
                 <h1>Categories</h1>
                 <ul class="list-group list-group-horizontal">
-                    <li v-for="category in categories" :key="category" 
+                    <li v-for="(category, i) in categories" :key="'A'+i" :id="category.id+'C'+i" 
                         class="list-group-item">
-                         <router-link :to="category.id">
+                        <button type="button" class="btn btn-link"
+                            @click="categoryUpdate(category.id)">
                             {{category.description}}
-                        </router-link> 
+                        </button>
                     </li>
                 </ul>   
             </div>                
-
-            <div class="row">
+           <div class="row">
                 <div class="col-3" style="text-align: left, margin-left: -14px;">
                     <h3>Processes Areas</h3>
                     <div class="list-group" id="list-tab" role="tablist">
-                    <a v-for="category in categories" :key="category" class="list-group-item list-group-item-action active" id="list-home-list" 
-                        data-toggle="list" href="#list-home" role="tab" aria-controls="home">
-
-                        {{ category.description }}
-                    </a>                        
-                    <a class="list-group-item list-group-item-action active" id="list-home-list" 
-                        data-toggle="list" href="#list-home" role="tab" aria-controls="home">
-                        Data Acquisition
-                    </a>
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" 
-                        data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
-                        Data Quality
-                    </a>
-                    <a class="list-group-item list-group-item-action" id="list-messages-list" 
-                    data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
-                        Data Ownership
-                    </a>
-                    <a class="list-group-item list-group-item-action" id="list-messages-list" 
-                    data-toggle="list" href="#list-data" role="tab" aria-controls="messages">
-                        Infrastructure
-                    </a>      
+                        <a v-for="(processArea, i) in processAreas" :key="'A'+i" 
+                            :class="`list-group-item list-group-item-action ${getActive(i)}`"
+                            :id="'list-PA'+i" 
+                            data-toggle="list" :href="'#list-L'+i" 
+                            role="tab" aria-controls="home">
+                            {{ processArea.description }}
+                        </a>   
                     </div>
                 </div>
                 <div class="col-9">
                     <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" 
-                        aria-labelledby="list-home-list">
-                        <LayoutProcessArea message="text ffdgdfg  01"/>    
-                    </div>
-                    <div class="tab-pane fade" id="list-profile" role="tabpanel" 
-                        aria-labelledby="list-profile-list">
-                        <LayoutProcessArea message="text ffdgdfg  02"/>    
-                    </div>
-                    <div class="tab-pane fade" id="list-messages" role="tabpanel" 
-                        aria-labelledby="list-messages-list">
-                        <LayoutProcessArea message="text ffdgdfg  03"/>    
-                    </div>
-                    <div class="tab-pane fade" id="list-data" role="tabpanel" 
-                        aria-labelledby="list-data-list">
-                        <LayoutProcessArea message="text ffdgdfg  04"/>    
-                    </div>       
-                    </div>
+                        <div v-for="(processArea, i) in processAreas" :key="processArea" 
+                            :class="`tab-pane fade ${getActivePainel(i)}`" 
+                            :id="'list-L'+i" 
+                            role="tabpanel" :aria-labelledby="'list-PA'+i" >
+                            <LayoutProcessArea :processAera="processArea"/>     
+                        </div>
+                     </div>
                 </div>
-            </div>    
+            </div>   
         </div>
     </div>
 </template>
@@ -77,37 +53,77 @@ export default {
   },   
   data: () => ({
     categories: [],
-    categorySel: String
+    categorySel: String,
+    processAreas: [],
+    processAreaSel: []
   }),
   props: {
-    category: String
+    categoryId: String
   },
   created() {
-    console.log("created()")
-    console.log(this.category)
+    console.log("* Created() -> Category: " + this.category)
     this.getData()
   },  
   methods: {
+    getActive: function (index) {
+        if (index == 0) 
+            return "active" 
+        else
+            return "" 
+    },
+    getActivePainel: function (index) {
+        if (index == 0) 
+            return "show active" 
+        else
+            return "" 
+    },    
     getData() {
       let self = this
-      console.log("getData()")
+      this.categories= []
+      this.processAreas= []
+      console.log("*** getData()")
+
+      // get categories
       db.collection("categories").get()
         .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
             self.categories.push(doc.data());
-
             //category selected in page load
-            if ( self.category == doc.data().id ) {
+            console.log("***** db.collection('categories')")
+            console.log("***** Self.categoryId : "+self.categoryId)
+            console.log("***** Doc.data().id   : "+doc.data().id)
+            if ( self.categoryId == doc.data().id ) {
                 self.categorySel= doc.data();
-                console.log(self.categorySel)
+                console.log(self.categorySel.description)
             }
-
         });
       });
+
+      // get process areas
+      db.collection("processAreas").get()
+        .then(function(querySnapshot) {
+          querySnapshot.forEach(function(doc) {
+            //category selected in page load
+            console.log("******* db.collection('processAreas')")
+            console.log("******* Self.categorySel.id : "+self.categorySel.id)
+            console.log("******* Doc.data().category : "+doc.data().category)            
+            if ( doc.data().category == self.categorySel.id ) {
+                self.processAreas.push(doc.data());
+                self.processAreaSel= doc.data();
+                console.log(self.processAreaSel)
+            }
+        });
+      }); 
+
     }, 
     viewCategory: function (id) {
       alert(id)
-    }
+    },
+    categoryUpdate: function (id) {
+        this.categoryId= id
+        this.getData()
+        //console.log('this.categoryId: '+this.categoryId)
+    }      
   }
 }
 </script>

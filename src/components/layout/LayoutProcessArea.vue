@@ -7,27 +7,27 @@
             <div class="card-body">
               <p class="card-text">
                 <span class="label">Category: </span><br>
-                <span class="text">Data Management</span><br>
+                <span class="text">{{processAera.category}}</span><br>
 
                 <span class="label">Process Area: </span><br>
-                <span class="text">Data Acquisition</span><br>
+                <span class="text">{{processAera.description}}</span><br>
 
                 <span class="label">Purpose: </span><br>
-                <span class="text">To obtain data about students' and teachers' actions, 
-                  supporting the expansion of the available data sources for analysis.</span><br>
+                <span class="text">{{processAera.purpose}}</span><br>
               
                 <span class="label">Goals: </span><br>
-                <span class="text">To identify and to provide access to data sources that 
-                  can be used for data analysis in LA, expanding the range of possible 
-                  analyzes; To acquire data under previously defined ethical and privacy 
-                  criteria, excluding from the scope data that does not contribute to 
-                  the progress of the	teaching and learning process; and Encourage prior 
-                  assessment of the data acquisition costs.</span>
+                <span class="text">
+                  <ul>
+                    <li v-for="(goal, i) in processAera.goals" :key="'A'+i">
+                        {{ goal }}
+                    </li>  
+                  </ul>
+                </span>
 
-                <LayoutMaturityLevel tCard="danger"  nLevel="1" :tLevel="tLevel"/>
-                <LayoutMaturityLevel tCard="warning" nLevel="2" :tLevel="tLevel"/>
-                <LayoutMaturityLevel tCard="primary" nLevel="3" :tLevel="tLevel"/>
-                <LayoutMaturityLevel tCard="success" nLevel="4" :tLevel="tLevel"/>
+                <LayoutMaturityLevel tCard="danger"  nLevel="1" :tLevel="processAera.level01"/>
+                <LayoutMaturityLevel tCard="warning" nLevel="2" :tLevel="processAera.level02"/>
+                <LayoutMaturityLevel tCard="primary" nLevel="3" :tLevel="processAera.level03"/>
+                <LayoutMaturityLevel tCard="success" nLevel="4" :tLevel="processAera.level04"/>
               </p>
             </div>
           </div>
@@ -44,9 +44,9 @@ export default {
   components: {
     LayoutMaturityLevel
   },  
-  data: () => ({
-    tLevel: "Teste"
-  }),
+  props: {
+    processAera: Object
+  }   
 }
 </script>
 
@@ -63,6 +63,6 @@ span {
   font-weight: bolder;
 }
 .text {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 </style>

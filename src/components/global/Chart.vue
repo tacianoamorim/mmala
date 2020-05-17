@@ -1,31 +1,17 @@
 <script>
-import { Radar } from 'vue-chartjs'
+
+import { Radar, mixins } from 'vue-chartjs'
+const { reactiveProp } = mixins
 
 export default {
   extends: Radar,
-  data: () => ({
-    chartdata: {
-      labels: ['January', 'February', 'Março', 'Abril', 'Junho'],
-      datasets: [
-        {
-          label: 'Chart01',
-          data: [1, 2, 3, 4]
-        },
-        {
-          label: 'Chart02',
-          color: '#F7C331',
-          data: [1, 2, 3, 4]
-        }        
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false
-    }
-  }),
-
+  mixins: [reactiveProp],
+  props: ['options'],
   mounted () {
-    this.renderChart(this.chartdata, this.options)
+    // this.chartData is created in the mixin.
+    // If you want to pass options please create a local options object
+    this.renderChart(this.chartData, this.options)
   }
 }
+
 </script>

@@ -5,9 +5,12 @@
           style="width: 100%;">
         <div class="card-header label">Maturity level {{nLevel}}</div>
         <div class="card-body">
-
           <p class="card-text">
-            {{ tLevel }}
+            <ul>
+              <li v-for="(level, i) in tLevel" :key="'A'+i">
+                  {{ level }}
+              </li>  
+            </ul>            
           </p>            
         </div>
       </div>
@@ -20,7 +23,7 @@ export default {
   props: {
     tCard: String,
     nLevel: String,
-    tLevel: String
+    tLevel: []
   }    
 }
 </script>

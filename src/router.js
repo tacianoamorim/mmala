@@ -13,25 +13,25 @@ const routes = [
   },
   {
     path: '/form',
-    name: 'Form',
+    name: 'form',
     component: () => import('./pages/Form.vue')
   },
   {
     path: '/register/:id',
-    name: 'Register',
+    name: 'register',
     component:  () => import('./pages/Register.vue'),
     props: true
   },
   {
-    path: '/graphic/:pChartdata/:pOptions',
-    name: 'Graphic',
+    path: '/graphic/:pLabels/:pValues/:pInstitution',
+    name: 'graphic',
     component:  () => import('./pages/Graphic.vue'),
     props: true
   },
   {
-    path: '/model/:category',
-    name: 'Model',
-    component: () => import('./pages/Model.vue'),
+    path: '/model/:categoryId',
+    name: 'model',
+    component: () => import(/* webpackChunkName: "model" */'./pages/Model.vue'),
     props: true
   } 
 ]

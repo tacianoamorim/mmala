@@ -1,13 +1,12 @@
 <template>
-
   <div id="grafico">
     <section>
      <div class="container">
-       <h1>{{pChartdata}} {{pOptions}}</h1>
       <div class="row align">
         <chart-container
-            :chartdata="pChartdata"
-            :options="pOptions"/>
+            :pLabels="pLabels"
+            :pValues="pValues"
+            :pInstitution="pInstitution"/>
       </div>  
       <button type="button" @click="newSearch()" class="btn btn-success btn-lg">New search</button>
     </div>
@@ -26,16 +25,15 @@ export default {
     ChartContainer
   },
   props: {
-    pChartdata: String, 
-    pOptions: String
+    pLabels: String, 
+    pValues: String,
+    pInstitution: String
   },  
-  data: () => ({
-    chartdata: this.pChartdata.split(","),
-    options: this.pOptions.split(",")
-  }),  
   methods: {
     newSearch() {
-      router.push({ name: 'Formulario' })
+      console("pLabels: " + this.pLabels)
+      console("pValues  : " + this.pValues)
+      router.push({ name: 'form' })
     }    
   }
 }

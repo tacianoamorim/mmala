@@ -30,9 +30,69 @@
           </p>
         </div>
         <div class="col-md-5 order-md-1">
-          <img src="../assets/img/categoryProcessArea.png" 
-            style="margin-top: 50px;margin-left: 50px;" 
-            height="500" width="500">
+          <div class="table-responsive-xl" style="padding-top: 45px; padding-left: 20px">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" class="colCategory">Categories</th>
+                  <th scope="col">Process Areas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Data Management</td>
+                  <td>
+                    <ul>
+                      <li>Data Acquisition (DA)</li>
+                      <li>Data Quality (DQ)</li>
+                      <li>Data Ownership (DO)</li>
+                      <li>Infrastructure (INF)</li>
+                    </ul>
+                  </td>
+                </tr>    
+                <tr>
+                  <td>Administration and Training</td>
+                  <td>
+                    <ul>
+                      <li>Funding (FUN)</li>
+                      <li>Leadership (LEA)</li>
+                      <li>Stakeholders Identification and Involvement (SII)</li>
+                      <li>Communication (COM)</li>
+                      <li>Stakeholders’ Training (STR)</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Pedagogical Support</td>
+                  <td>
+                    <ul>
+                      <li>Pedagogical planning of solutions (PPS)</li>
+                      <li>Support in Interpreting Results (SIR)</li>
+                      <li>Intervention Based on Results (IBR)</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Data Analysis</td>
+                  <td>
+                    <ul>
+                      <li>Development of own solutions (DOS)</li>
+                      <li>Acquisition of ready-made solutions (ACQ)</li>
+                      <li>Evaluating the effectiveness of solutions (EVA)</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Legislation, Privacy, and Ethics</td>
+                  <td>
+                    <ul>
+                      <li>Legislation, Privacy, and Ethics (LEP)</li>
+                    </ul>
+                  </td>
+                </tr>                                
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>      
     </section>
@@ -54,7 +114,7 @@
           </p>
         </div>
         <div class="col-md-5 order-md-2">
-          <img src="../assets/img/category.png" style="margin-top: 50px" height="483" width="471">
+          <img src="../assets/img/category.png" style="margin-top: 50px" height="385" width="374">
         </div>
       </div>      
     </section>
@@ -92,6 +152,25 @@ p {
 .secMMALA {
   background-color: #F7C331!important;
 }
+
+.colCategory {
+  width: 160px;
+}
+td {
+  font-size: 13px;
+  padding-top: 2px;
+  padding-left: 4px;
+  padding-bottom: 3px;
+}
+ul {
+  margin-bottom: 3px;
+}
+th {
+  background-color: #F7C331; 
+  color: #FFF;
+  font-size: medium;
+}
+
 section {
   height: 100vh;
 }

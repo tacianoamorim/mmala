@@ -19,6 +19,23 @@
      <div class="container">
       <h1 >Search form</h1>
       <form @submit.prevent="submit()">
+
+        <div class="row">
+          <div class="col-md-2">
+            <label ref="institution">Institution name:</label>
+          </div>
+          <div class="col-le-10">
+            <input type="text" id="institution">
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col-le-2">
+            <label ref="yuor">Your position:</label>
+          </div>
+          <div class="col-le-10">
+            <input type="text" id="yuor">
+          </div>          
+        </div>
         <div class="row">
           <div class="col-md-12">
             <h4>1) Regarding the categories, inform the importance that each one has to support the adoption of Learning Analytics.</h4>
@@ -33,7 +50,6 @@
                 <div class="col-sm-2"><i>2</i></div>                    
                 <div class="col-sm-2"><i>3</i></div> 
                 <div class="col-sm-2"><i>4</i></div>                    
-                <div class="col-sm-2"><i>5</i></div>                                                                         
               </div> 
               <fieldset class="form-group"> 
                 <div class="row">
@@ -58,11 +74,6 @@
                       <input class="form-check-input" type="radio" name="rb01DataManager" value="I">
                     </div>
                   </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="rb01DataManager" value="VI">
-                    </div>
-                  </div>                                                       
                 </div>
               </fieldset>
             </div>   
@@ -94,11 +105,6 @@
                         <input class="form-check-input" type="radio" name="rb01Administration" value="I">
                       </div>
                     </div>
-                    <div class="col-sm-2">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rb01Administration" value="VI">
-                      </div>
-                    </div>                                                       
                   </div>
                 </fieldset>
               </div> 
@@ -130,11 +136,6 @@
                       <input class="form-check-input" type="radio" name="rb01Pedagogical" value="I">
                     </div>
                   </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="rb01Pedagogical" value="VI">
-                    </div>
-                  </div>                                                       
                 </div>
               </fieldset>
             </div> 
@@ -167,11 +168,6 @@
                       <input class="form-check-input" type="radio" name="rb01DataAnalysis" value="I">
                     </div>
                   </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="rb01DataAnalysis" value="VI">
-                    </div>
-                  </div>                                                       
                 </div>
               </fieldset>
             </div> 
@@ -203,11 +199,6 @@
                       <input class="form-check-input" type="radio" name="rb01Legislation" value="I">
                     </div>
                   </div>
-                  <div class="col-sm-2">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="rb01Legislation" value="VI">
-                    </div>
-                  </div>                                                       
                 </div>
               </fieldset>
             </div> 
@@ -232,14 +223,26 @@ import router from '../router'
 export default {
   name: "app",
   data: () => ({
-    chartdata: "40, 20, 30",
-    options: "January, February, Março"
+    values: String,
+    labels: String,
+    institutionName: String,
+    yourPosition: String
   }),
   methods: {
     submit() {
-      router.push({ name: 'Graphic', params: { 
-        pChartdata: this.chartdata, 
-        pOptions: this.options 
+      this.institutionName= "Gráfico Taciano Amorim"
+      this.values= "1, 2, 3, 4, 0, 3",
+      this.labels= "LAT001, LAT002, LAT003, LAT004, LAT005, LAT006"
+      console.log("-----------------SUBMIT FORM---------------------")
+      console.log(this.institutionName)
+      console.log(this.values)
+      console.log(this.labels)
+      console.log("--------------------------------------------")
+
+      router.push({ name: 'graphic', params: { 
+        pLabels: this.labels, 
+        pValues: this.values,
+        pInstitution: this.institutionName 
       } })
     },
   }

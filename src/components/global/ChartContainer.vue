@@ -1,31 +1,55 @@
 <template>
-            <div class="chart">
-                <line-chart v-if="loaded"
-                :chartdata="chartdata" :options="options"/>
-            </div>
-
-
-
+  <div>
+       <h1> Chartcontainer</h1>
+       <h3> {{pLabels}}</h3>
+       <h3> {{pValues}}</h3>
+      <div class="chart">
+        <chart :chart-data="datacollection"/>
+      </div>
+  </div>
 </template>
 
 <script>
-import LineChart from './Chart.vue'
+import Chart from './Chart.vue'
 
 export default {
-  name: 'LineChartContainer',
+  name: 'ChartContainer',
   components: { 
-      LineChart 
+    Chart 
   },
   data: () => ({
-    loaded: false,
-    chartdata: [10, 20, 30, 40],
-    options: ['January', 'February', 'Março', 'Abril', 'Junho']
+    datacollection: null
   }),
+  props: {
+    pLabels: String, 
+    pValues: String,
+    pInstitution: String
+  },  
+
   async mounted () {
     console.log("Chart mounted")
-    this.loaded = true
-
-  }
+    console.log("-----------------ChartContainer---------------------")
+    console.log(this.pLabels)
+    console.log(this.pValues)
+    console.log(this.pInstitution)
+    console.log("--------------------------------------------")
+    this.fillData ()
+  },
+     methods: {
+      fillData () {
+        this.datacollection = {
+          labels: this.pLabels.split(","),
+          datasets: [
+            {
+              label: this.pInstitution,
+              borderColor: '#f87979',
+              borderWidth: 1,
+              data: this.pValues.split(","),
+            }
+          ]
+        }
+      }
+    }
 }
 </script>
 
