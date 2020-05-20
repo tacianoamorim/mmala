@@ -149,9 +149,6 @@
 p { 
   text-align: justify; 
 }
-.secMMALA {
-  background-color: #F7C331!important;
-}
 
 .colCategory {
   width: 160px;
@@ -178,43 +175,6 @@ section {
 h1 {
   padding-top: 30px;
   padding-bottom: 20px;
-}
-
-/* DIV */
-#divLateral h1 {
-  font-size: 40px;
-  color: #6B7A8F;
-  line-height: 40px;
-  text-align: left; 
-  text-shadow: #b4bac1 0.1em 0.1em 0.2em 
-}
-.group:before,
-.group:after {
-  content: "";
-  display: table;
-} 
-.group:after {
-  clear: both;
-}
-.group {
-  zoom: 1; 
-}
-
-#divLateral{
-  position: relative;
-  border-width: -10px;
-  width: 50%;
-  float: left;
-  margin: initial;
-  padding: inherit;    
-}
-#divA{
-  position: relative;
-  border-width:2px;
-  width: 400px;
-  height: 400px;
-  left:0px;
-  float: left;
 }
 
 /* ROTULO */
@@ -269,10 +229,5 @@ h1 {
   text-align: left;
 }
 
-.mmala{
-  color: #F7C331;
-  font-weight: bolder;
-  font-style: italic;
-}
 
 </style>

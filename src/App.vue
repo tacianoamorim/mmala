@@ -22,14 +22,11 @@
       </nav>
       <router-view/>
     </main>    
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2020 - All rights reserved</p>
-    </footer>    
+
   </div>
 </template>
 
-<style scoped>
+<style>
 
 .menu-fixo {
 	position: fixed;
@@ -38,9 +35,6 @@
 	transition: all .5s;
 }
 
-body {
-    background: #f3f0f0;
-}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -50,6 +44,7 @@ body {
 }
 
 body {
+  background: #f3f0f0;
   margin: 0;
   padding: 0;  
   font-size: 28px;

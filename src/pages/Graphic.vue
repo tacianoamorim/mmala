@@ -1,5 +1,15 @@
 <template>
-  <div id="grafico">
+  <div id="app">
+    <section class="navbar secMMALA " style="height: 100vh">
+      <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
+        <div id="divLateral">
+          <h1>Graphic result</h1>
+        </div>
+        <div id="divA">
+            <img src="../assets/img/checklist.png" height="400" width="400">
+        </div>
+      </div>
+    </section>      
     <section>
      <div class="container">
       <div class="row align">

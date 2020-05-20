@@ -1,10 +1,7 @@
 <template>
   <div>
-       <h1> Chartcontainer</h1>
-       <h3> {{pLabels}}</h3>
-       <h3> {{pValues}}</h3>
       <div class="chart">
-        <chart :chart-data="datacollection"/>
+        <chart :chart-data="datacollection" :width="900" :height="900" />
       </div>
   </div>
 </template>
@@ -27,26 +24,48 @@ export default {
   },  
 
   async mounted () {
-    console.log("Chart mounted")
+/*    console.log("Chart mounted")
     console.log("-----------------ChartContainer---------------------")
     console.log(this.pLabels)
     console.log(this.pValues)
     console.log(this.pInstitution)
-    console.log("--------------------------------------------")
+    console.log("--------------------------------------------") */
     this.fillData ()
   },
      methods: {
       fillData () {
         this.datacollection = {
-          labels: this.pLabels.split(","),
+          labels: this.pLabels.split(";"),
           datasets: [
             {
               label: this.pInstitution,
-              borderColor: '#f87979',
+              borderColor: '#000',
               borderWidth: 1,
-              data: this.pValues.split(","),
+              data: this.pValues.split(";"),
+              backgroundColor: 'transparent',
+              pointBackgroundColor:[ '#fff'],
             }
-          ]
+          ],
+          scales: {
+              ticks: {
+                max: 4,
+                min: 0,
+                stepSize: 1,
+                suggestedMin: 0,
+                suggestedMax: 4,
+                showLabelBackdrop: true                
+              }
+          }          
+/*          scales: {
+            yAxes: [{
+                ticks: {
+                  stepSize: 1,
+                  maxTicksLimit: 5,
+                  suggestedMin: 50,
+                  suggestedMax: 100                  
+                }
+            }] 
+          }  */     
         }
       }
     }
