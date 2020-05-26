@@ -1,5 +1,8 @@
 <template>
   <div id="app-5">
+    <base-spinner/>
+    <layout-notification/>
+
     <main class="main">  
 
       <!-- TOPO -->
@@ -10,11 +13,11 @@
             <div class="col-2">
             </div>
             <div class="col-3">
-              <router-link to="/model/AT" class="btn btn-info btn-sm" 
-                style="background-color: #6B7A8F;">See the MMALA Model</router-link>              
+              <router-link to="/model/AT" class="btn btn-info btn-sm top" 
+                style="background-color: #6B7A8F;">Discover MMALA</router-link>              
             </div>
             <div class="col-5">
-              <router-link to="/form" class="btn btn-info btn-sm" 
+              <router-link to="/form" class="btn btn-info btn-sm top" 
                 style="background-color: #6B7A8F;">Evaluate your Organization</router-link>
             </div>                   
           </div>
@@ -26,7 +29,22 @@
   </div>
 </template>
 
-<style>
+<script>
+import BaseSpinner from './components/global/BaseSpinner'
+import LayoutNotification from './components/layout/LayoutNotification'
+export default {
+  name: 'App',
+  components: {
+    BaseSpinner,
+    LayoutNotification
+  },
+   mounted () {
+      this.$root.$emit('Spinner::hide')
+  }
+}
+</script>
+
+<style scoped>
 
 .menu-fixo {
 	position: fixed;
@@ -45,10 +63,7 @@
 
 body {
   background: #f3f0f0;
-  margin: 0;
-  padding: 0;  
   font-size: 28px;
-  font-family: 'Raleway', sans-serif, Arial, Helvetica;
 }
 
 .header {
@@ -57,23 +72,11 @@ body {
   text-align: center;
 }
 
-footer {
-  background-color: #6B7A8F;
-  padding: 1px;
-  font-size: small;
-  margin: 0px;
-  bottom:0;
-}
-footer p {
-  color: #FFFFFF ;
-  text-align: center;
-  padding: 5px;
-  font-size: small;
-  margin: 0px;
-  bottom:0;
-}
-
 button {
   font-size: small !important;
+}
+
+.top {
+  margin: 10px;
 }
 </style>

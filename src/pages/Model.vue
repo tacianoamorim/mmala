@@ -1,44 +1,53 @@
 <template>
     <div id="app">
-        <div class="container " id="printable">
-            <div class="row topo" >
-                <h1>Categories</h1>
-                <ul class="list-group list-group-horizontal">
-                    <li v-for="(category, i) in categories" :key="'A'+i" :id="category.id+'C'+i" 
-                        class="list-group-item">
-                        <button type="button" class="btn btn-link"
-                            @click="categoryUpdate(category.id)">
-                            {{category.description}}
-                        </button>
-                    </li>
-                </ul>   
-            </div>                
-           <div class="row">
-                <div class="col-3" style="text-align: left, margin-left: -14px;">
-                    <h3>Processes Areas</h3>
-                    <div class="list-group" id="list-tab" role="tablist">
-                        <a v-for="(processArea, i) in processAreas" :key="'A'+i" 
-                            :class="`list-group-item list-group-item-action ${getActive(i)}`"
-                            :id="'list-PA'+i" 
-                            data-toggle="list" :href="'#list-L'+i" 
-                            role="tab" aria-controls="home">
-                            {{ processArea.description }}
-                        </a>   
-                    </div>
-                </div>
-                <div class="col-9">
-                    <div class="tab-content" id="nav-tabContent">
-                        <div v-for="(processArea, i) in processAreas" :key="processArea" 
-                            :class="`tab-pane fade ${getActivePainel(i)}`" 
-                            :id="'list-L'+i" 
-                            role="tabpanel" :aria-labelledby="'list-PA'+i" >
-                            <LayoutProcessArea :processAera="processArea"/>     
-                        </div>
-                     </div>
-                </div>
-            </div>   
+    <section class="navbar secMMALA" style="height: 50vh">
+      <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
+        <div id="divLateral">
+          <h1>MMALA Categories</h1>
         </div>
+        <div id="divA1">
+            <img src="../assets/img/modelCategories.png" height="180" width="155">
+        </div>
+      </div>
+      <div style="align-center: center">
+        <ul class="list-group list-group-horizontal">
+            <li v-for="(category, i) in categories" :key="'A'+i" :id="category.id+'C'+i" 
+                class="list-group-item">
+                <button type="button" class="btn btn-link"
+                    @click="categoryUpdate(category.id)">
+                    {{category.description}}
+                </button>
+            </li>
+        </ul>        
+      </div>
+    </section>       
+    <div class="container" style="margin-top: 30px;margin-bottom: 30px;" id="printable">
+      <div class="row">
+          <div class="col-3" style="text-align: left, margin-left: -14px;">
+              <h3>Process Areas</h3>
+              <div class="list-group" id="list-tab" role="tablist">
+                  <a v-for="(processArea, i) in processAreas" :key="'A'+i" 
+                      :class="`list-group-item list-group-item-action ${getActive(i)}`"
+                      :id="'list-PA'+i" 
+                      data-toggle="list" :href="'#list-L'+i" 
+                      role="tab" aria-controls="home">
+                      {{ processArea.description }}
+                  </a>   
+              </div>
+          </div>
+          <div class="col-9">
+              <div class="tab-content" id="nav-tabContent">
+                  <div v-for="(processArea, i) in processAreas" :key="processArea" 
+                      :class="`tab-pane fade ${getActivePainel(i)}`" 
+                      :id="'list-L'+i" 
+                      role="tabpanel" :aria-labelledby="'list-PA'+i" >
+                      <LayoutProcessArea :processAera="processArea"/>     
+                  </div>
+                </div>
+          </div>
+      </div>   
     </div>
+  </div>
 </template>
 
 <script>
@@ -64,25 +73,27 @@ export default {
     console.log("* Created() -> Category: " + this.category)
     this.getData()
   },  
+
   methods: {
     getActive: function (index) {
-        if (index == 0) 
-            return "active" 
-        else
-            return "" 
+      if (index == 0) 
+          return "active" 
+      else
+          return "" 
     },
     getActivePainel: function (index) {
-        if (index == 0) 
-            return "show active" 
-        else
-            return "" 
+      if (index == 0) 
+          return "show active" 
+      else
+          return "" 
     },    
     getData() {
+      this.$root.$emit('Spinner::show')
       let self = this
       this.categories= []
       this.processAreas= []
       console.log("*** getData()")
-
+      
       // get categories
       db.collection("categories").get()
         .then(function(querySnapshot) {
@@ -114,15 +125,14 @@ export default {
             }
         });
       }); 
-
+      this.$root.$emit('Spinner::hide')
     }, 
     viewCategory: function (id) {
       alert(id)
     },
     categoryUpdate: function (id) {
-        this.categoryId= id
-        this.getData()
-        //console.log('this.categoryId: '+this.categoryId)
+      this.categoryId= id
+      this.getData()
     }      
   }
 }
@@ -135,19 +145,15 @@ export default {
   margin-bottom: 30px;
   border-radius: 5px;
 }
-
 .topo h1 {
     color: black;
     margin: 10px;
 }
-
 .topo ul {
     width: 99%;
     margin: 5px;
 }
-
 .topo ul li{
     width: 100%;
 }
-
 </style>

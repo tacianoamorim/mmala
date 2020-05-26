@@ -66,7 +66,6 @@
 import db from '../firebase'
 //import BaseSpinner from '../components/global/BaseSpinner'
 
-
 export default {
   name: "app",
   components: {

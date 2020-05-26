@@ -5,9 +5,9 @@
       <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
         <div id="divLateral">
           <h1>
-            The Maturity Model for the Adoption of Learning Analytics (MMALA) is a guide 
-            that supports the adoption of Learning Analytics in Higher Education 
-            institutions.
+            The Maturity Model for the Adoption of Learning Analytics (MMALA) is a 
+            guide to support the adoption of Learning Analytics in Higher 
+            Education Institutions
           </h1>
         </div>
         <div id="divA">
@@ -21,12 +21,13 @@
         <div class="col-md-7 order-md-2">
           <h1 class="label darkLabel">Categories and Process Areas</h1>
           <p class="text darkText">
-            The MMALA covers the activities necessary for the institution to 
-            evolve in the adoption of LA.</p>
+            MMALA intends to describe the necessary activities to a 
+            Higher Education institution to adopt LA and gradually 
+            achieve higher maturity levels in this field.
+          </p>
           <p></p>
           <p class="text darkText">
-            The model is composed of 5 Categories, which are made up 
-            of Process Areas.
+             MMALA is composed of categories and process areas.
           </p>
         </div>
         <div class="col-md-5 order-md-1">
@@ -56,7 +57,7 @@
                     <ul>
                       <li>Funding (FUN)</li>
                       <li>Leadership (LEA)</li>
-                      <li>Stakeholders Identification and Involvement (SII)</li>
+                      <li>Stakeholders’ Identification and Involvement (SII)</li>
                       <li>Communication (COM)</li>
                       <li>Stakeholders’ Training (STR)</li>
                     </ul>
@@ -68,7 +69,7 @@
                     <ul>
                       <li>Pedagogical planning of solutions (PPS)</li>
                       <li>Support in Interpreting Results (SIR)</li>
-                      <li>Intervention Based on Results (IBR)</li>
+                      <li>Result-based Intervention(RBI)</li>
                     </ul>
                   </td>
                 </tr>
@@ -99,21 +100,25 @@
 
     <section id="processArea" style="background-color: #DCDCDC">
      <div class="row featurette">
-        <div class="col-md-7 order-md-1">
+        <div class="col-md-8 order-md-1">
           <h1 class="label darkLabel">Process Area</h1>
           <p class="text darkText" >
-            The Process Areas of the model have a fixed structure, composed of 
-            the general objective of this area, the objectives that are to be 
-            achieved, the process areas related to it, the functional practices 
-            distributed in 4 maturity levels and the results.
+            Each process area is composed of its purpose, goals, related process areas, 
+            and functional practices (grouped in levels 1 to 4). Each level also 
+            describes examples of work products resulting from the institutionalization 
+            of the respective maturity level. 
           </p>
           <p class="text darkText">
-            The MMALA was designed to allow its use in a flexible and 
-            adaptable way. That is, the institution can choose to focus 
-            on any combination of categories or process areas.
+            MMALA intends to describe the necessary activities to a Higher Education 
+            institution to adopt LA and gradually achieve higher maturity levels in 
+            this field. MMALA is composed of categories and process areas.
+            MMALA was designed so as to allow its use in a flexible and adaptable way. 
+            That is, the Institution may choose to focus on any combination of 
+            categories or process areas. The related process areas are a sure 
+            indication of those areas where joint adoption is recommended.
           </p>
         </div>
-        <div class="col-md-5 order-md-2">
+        <div class="col-md-4 order-md-2">
           <img src="../assets/img/category.png" style="margin-top: 50px" height="385" width="374">
         </div>
       </div>      
@@ -128,12 +133,12 @@
       </div>
     </section>  
 
-    <section id="get"  style="background-color: #DCDCDC; height: 90vh">
+    <section id="get"  style="background-color: #DCDCDC; height: 100vh">
      <div class="row featurette" >
         <div class="col-md-7 order-md-2">
           <p class="text darkText" style="padding-top: 200px;">
-            Get to know <span class="mmala">MMALA</span> and understand the 
-            benefits that your institution can obtain with its use.
+            Get to know <span class="mmala">MMALA</span> to figure out the benefits that 
+            your Higher Education Institution can achieve with its use.
           </p>
         </div>
         <div class="col-md-5 order-md-1" style="text-align: center; padding-top: 108px;">
@@ -149,7 +154,6 @@
 p { 
   text-align: justify; 
 }
-
 .colCategory {
   width: 160px;
 }
@@ -167,16 +171,13 @@ th {
   color: #FFF;
   font-size: medium;
 }
-
 section {
   height: 100vh;
 }
-
 h1 {
   padding-top: 30px;
   padding-bottom: 20px;
 }
-
 /* ROTULO */
 .label {
   font-size: 40px;
@@ -200,7 +201,6 @@ h1 {
   text-align: center; 
   text-shadow: #b4bac1 0.1em 0.1em 0.2em;
 }
-
 /* text */
 .text { 
   text-align: justify; 
@@ -209,7 +209,7 @@ h1 {
   padding-right: 60px;  
 }
 .lightText { 
-  font-size: 33px;
+  font-size: 32px;
   color: #f3f0f0;
   line-height: 40px;
   text-align: left; 
@@ -217,17 +217,14 @@ h1 {
   margin-top: 10px
 }
 .darkText { 
-  font-size: 33px;
+  font-size: 32px;
   color: #6B7A8F;
   line-height: 40px;
   text-align: left; 
   text-shadow: #b4bac1 0.1em 0.1em 0.2em;
   margin-top: 10px;  
 }
-
 .left {
   text-align: left;
 }
-
-
 </style>
