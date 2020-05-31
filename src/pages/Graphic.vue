@@ -6,47 +6,136 @@
           <h1>Graphic result</h1>
         </div>
         <div id="divA1">
-            <img src="../assets/img/graphic.png" height="200" width="200">
+          <img src="../assets/img/graphic.png" height="200" width="200">
         </div>
       </div>
     </section>      
     <section>
-     <div class="container alignGraphic">
-      <div class="row align">
-        <chart-container
-            :pLabels="pLabels"
-            :pValues="pValues"
-            :pInstitution="pInstitution"/>
-
-        <div class="divButton">
-          <button type="button" @click="newSearch()" 
-            class="btn btn-success btn-lg">New search</button>
-        </div>            
+     <div class="container">
+        <div style="margin: 30px;">
+          <VueApexCharts type="radar" width="100%" 
+            :options="options" 
+            :series="series">
+          </VueApexCharts>
+        </div>
+      </div>         
+     <div class="container">        
+        <button type="button" @click="newSearch()" 
+          class="btn btn-success btn-lg divButton">New search</button>
       </div> 
-    </div>
   </section>          
 </div>
 </template>
 
 <script>
 
-import ChartContainer from '../components/global/ChartContainer'
+import VueApexCharts from 'vue-apexcharts'
 import router from '../router'
 
 export default {
   name: "grafico",
   components: {
-    ChartContainer
+    VueApexCharts
   },
   props: {
     pLabels: String, 
     pValues: String,
-    pInstitution: String
+    pInstitution: String 
+  },  
+  data: function() {
+    return {
+      series: [{
+        name: 'Maturity',
+        data: this.pValues.split(";")
+      }],
+      options: {
+        title: {
+          text: this.pInstitution,
+          align: 'center',
+          style: {
+            fontFamily: 'Helvetica, Arial, sans-serif',
+            fontWeight: 600,
+            cssClass: 'apexcharts-yaxis-title',
+            fontSize:  '28px',
+            color:  '#6B7A8F'              
+          },
+        },
+        markers: {
+          strokeColors: '#fff',
+          strokeWidth: 2,
+          strokeOpacity: 0.9,
+          strokeDashArray: 3,
+          fillOpacity: 1,
+          discrete: [{
+            seriesIndex: 0,
+            dataPointIndex: 7,
+            fillColor: '#e3e3e3',
+            strokeColor: '#fff',
+            size: 5
+          },{
+            seriesIndex: 0,
+            dataPointIndex: 5,
+            fillColor: '#e3e3e3',
+            strokeColor: '#fff',
+            size: 5
+          }],
+        },        
+        legend: {
+          show: true,
+          showForSingleSeries: false,
+          showForNullSeries: true,
+          showForZeroSeries: true,
+        },
+        chart: {
+          type: 'radar',
+          id: 'graphic-radar',
+          height: 700,
+          dropShadow: {
+            enabled: true,
+            blur: 1,
+            left: 1,
+            top: 1
+          }          
+        },
+        xaxis: {
+          categories: this.pLabels.split(";"),
+          labels: {
+            show: true,
+            style: {
+              colors: ["#a8a8a8"],
+              fontSize: "12px",
+              fontFamily: 'Arial'
+            }
+          }
+        },
+        yaxis: {
+          show: true,
+          showAlways: true,
+          showForNullSeries: true,
+          seriesName: undefined,
+          opposite: false,
+          reversed: false,
+          logarithmic: false,
+          tickAmount: 4,
+          min: 0,
+          max: 4,
+          forceNiceScale: false,
+          floating: false,
+          decimalsInFloat: undefined,  
+          labels: {
+            show: true,
+            style: {
+              colors: ["#a8a8a8"],
+              fontSize: "16px",
+              fontFamily: 'Arial'
+            }
+          }              
+        }        
+      }
+    }
   },  
   methods: {
     newSearch() {
-      //console.log("pLabels: " + this.pLabels)
-      //console.log("pValues  : " + this.pValues)
       router.push({ name: 'form' })
     }    
   }
@@ -55,13 +144,7 @@ export default {
 
 <style scoped>
 .divButton {
-  width: 100%;
-  text-align: right;
-  margin: 30px;
-}
-.alignGraphic {
-  margin-top: 30px;
-  margin-left: -56px;  
+  margin-bottom: 30px;
 }
 
 .align {

@@ -1,7 +1,5 @@
 <template>
-
   <div id="app">
-
     <section class="navbar secMMALA " style="height: 100vh">
       <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
         <div id="divLateral">
@@ -12,12 +10,10 @@
             <img src="../assets/img/checklist.png" height="400" width="400">
         </div>
       </div>
-    </section>    
-
+    </section>
     <section>
      <div class="container">
       <h1 class="title">Search form</h1>
-
       <form @submit.prevent="submit()" class="was-validated">
         <div class="row">
           <div class="col-md-12">
@@ -26,7 +22,6 @@
             </h3>
           </div>
         </div>  
-
         <div class="row">
           <div class="col-md-12">
             <i>(All the provided information will be kept confidential, 
@@ -35,7 +30,6 @@
             </i>
           </div>
         </div>  
-
         <div class="form-group row">
           <label for="institutionName:" class="col-sm-2 col-form-label"><b>Institution name</b></label>
           <div class="col-sm-10">
@@ -50,13 +44,11 @@
               id="yourPosition" value="">
           </div>
         </div>        
-
         <div class="row">
           <div class="col-md-12">
             <i>At what level of quality does your Institution perform the following activities?</i>
           </div>
         </div>      
-
         <div class="row">
           <div class="col-md-12">
             <table class="table table-bordered">
@@ -81,45 +73,30 @@
                     </ul>  
                   </td>
                   <td>
-                    <div class="custom-control custom-radio">
-                      <input class="custom-control-input" type="radio"  required
+                      <input class="form-check" type="radio" 
                         v-model="dM_DA" :id="'dM_DA'+this.getIndex()"
                         name="dM_DA" value="0:Data Acquisition" alt ="alt">
-                      <label class="custom-control-label" :for="'dM_DA'+this.getIndexAtual()"></label>
-                    </div>
                   </td>
                   <td>
-                    <div class="custom-control custom-radio">
-                      <input class="custom-control-input" type="radio"  required
+                      <input class="form-check" type="radio" 
                         v-model="dM_DA" :id="'dM_DA'+this.getIndex()"
                         name="dM_DA" value="1:Data Acquisition">
-                      <label class="custom-control-label" :for="'dM_DA'+this.getIndexAtual()"></label>
-                    </div>
                   </td>
                   <td>
-                    <div class="custom-control custom-radio">
-                      <input class="custom-control-input" type="radio"  required
+                      <input class="form-check" type="radio" 
                         v-model="dM_DA"  :id="'dM_DA'+this.getIndex()" 
                         name="dM_DA" value="2:Data Acquisition">
-                      <label class="custom-control-label" :for="'dM_DA'+this.getIndexAtual()"></label>
-                    </div>
                   </td>
                   <td>
-                    <div class="custom-control custom-radio">
-                    <input class="custom-control-input" type="radio"  required
+                    <input class="form-check" type="radio" 
                       v-model="dM_DA"  :id="'dM_DA'+this.getIndex()" name="dM_DA" 
                       value="3:Data Acquisition">
-                    <label class="custom-control-label" :for="'dM_DA'+this.getIndexAtual()"></label>
-                    </div>
                   </td>
                   <td>
-                    <div class="custom-control custom-radio">
-                      <input class="custom-control-input" type="radio"  required
+                      <input class="form-check" type="radio" 
                         v-model="dM_DA"  :id="'dM_DA'+this.getIndex()" name="dM_DA" 
                         value="4:Data Acquisition">
-                      <label class="custom-control-label" :for="'dM_DA'+this.getIndexAtual()"></label>
-                    </div>
-                  </td>                                                                        
+                   </td>                                                                        
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -130,15 +107,15 @@
                       <li>Definition of people responsible for data quality;</li>
                     </ul>  
                   </td>                  
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_DQ" value="0:Data Quality"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-checkt" type="radio"  
                       v-model="dM_DQ" value="1:Data Quality"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_DQ" value="2:Data Quality"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_DQ" value="3:Data Quality"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_DQ" value="4:Data Quality"></td>              
                 </tr>   
                 <tr>
@@ -150,15 +127,15 @@
                       <li>Access permission to data that the participants of projects have ownership over.</li>
                     </ul>  
                   </td>                   
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_DO" value="0:Data Ownership"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_DO" value="1:Data Ownership"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_DO" value="2:Data Ownership"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_DO" value="3:Data Ownership"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_DO" value="4:Data Ownership"></td>              
                 </tr>   
                 <tr>
@@ -173,15 +150,15 @@
                       <li>Assurance of security and privacy of students’ data.</li>                      
                     </ul>  
                   </td>                   
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_INF" value="0:Infrastructure"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_INF" value="1:Infrastructure"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_INF" value="2:Infrastructure"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_INF" value="3:Infrastructure"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dM_INF" value="4:Infrastructure"></td>              
                 </tr>                                             
               </tbody>
@@ -212,15 +189,15 @@
                       <li>Assessment of LA projects costs and their return to the Institution.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_FUN" value="0:Funding"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_FUN" value="1:Funding"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_FUN" value="2:Funding"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_FUN" value="3:Funding"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_FUN" value="4:Funding"></td>              
                 </tr>
                 <tr>
@@ -231,15 +208,15 @@
                       <li>Coordinated execution of LA projects in the Institution.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_LEA" value="0:Leadership"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_LEA" value="1:Leadership"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_LEA" value="2:Leadership"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_LEA" value="3:Leadership"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_LEA" value="4:Leadership"></td>              
                 </tr>
                 <tr>
@@ -250,15 +227,15 @@
                       <li>Encouraging stakeholder’s participation in LA projects.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_SII" value="0:Stakeholders’ Identification and Involvement"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_SII" value="1:Stakeholders’ Identification and Involvement"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_SII" value="2:Stakeholders’ Identification and Involvement"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_SII" value="3:Stakeholders’ Identification and Involvement"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_SII" value="4:Stakeholders’ Identification and Involvement"></td>              
                 </tr>
                 <tr>
@@ -270,15 +247,15 @@
                       <li>Improvement of both the projects and policies by Institution members’ feedback.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_COM" value="0:Communication"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_COM" value="1:Communication"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_COM" value="2:Communication"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_COM" value="3:Communication"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_COM" value="4:Communication"></td>              
                 </tr>
                 <tr>
@@ -291,15 +268,15 @@
                       <li>Providing training for stakeholders on Learning Analytics institutional policies.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_ST" value="0:Stakeholders’ Training"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_ST" value="1:Stakeholders’ Training"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_ST" value="2:Stakeholders’ Training"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_ST" value="3:Stakeholders’ Training"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="aT_ST" value="4:Stakeholders’ Training"></td>              
                 </tr>                                                                
               </tbody>
@@ -330,15 +307,15 @@
                       <li>Monitoring of LA solutions to assess whether they reach their pedagogical goals.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_PPS" value="0:Pedagogical Planning of Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_PPS" value="1:Pedagogical Planning of Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_PPS" value="2:Pedagogical Planning of Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_PPS" value="3:Pedagogical Planning of Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_PPS" value="4:Pedagogical Planning of Solutions"></td>              
                 </tr>
                 <tr>
@@ -350,15 +327,15 @@
                       <li>Definition of pedagogical guidelines for the interpretation of the analysis results.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_SIR" value="0:Support in Interpreting Results"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_SIR" value="1:Support in Interpreting Results"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_SIR" value="2:Support in Interpreting Results"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_SIR" value="3:Support in Interpreting Results"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_SIR" value="4:Support in Interpreting Results"></td>              
                 </tr>     
                 <tr>
@@ -370,15 +347,15 @@
                       <li>Involvement of a pedagogical team in the planning and execution of interventions.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_RI" value="0:Result-based Intervention"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_RI" value="1:Result-based Intervention"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_RI" value="2:Result-based Intervention"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_RI" value="3:Result-based Intervention"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="pS_RI" value="4:Result-based Intervention"></td>              
                 </tr>                              
               </tbody>
@@ -409,15 +386,15 @@
                       <li>Involvement of different departments and professionals in the design and development of LA solutions.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_DOS" value="0:Development of Own Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_DOS" value="1:Development of Own Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_DOS" value="2:Development of Own Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_DOS" value="3:Development of Own Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_DOS" value="4:Development of Own Solutions"></td>              
                 </tr>
                 <tr>
@@ -430,15 +407,15 @@
                       <li>Evaluation of costs involved in purchasing tools.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_ARS" value="0:Acquisition of Ready-made Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_ARS" value="1:Acquisition of Ready-made Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_ARS" value="2:Acquisition of Ready-made Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_ARS" value="3:Acquisition of Ready-made Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_ARS" value="4:Acquisition of Ready-made Solutions"></td>              
                 </tr>     
                 <tr>
@@ -450,15 +427,15 @@
                       <li>Adoption of tools that have undergone evaluation procedures</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_EES" value="0:Evaluating the Effectiveness of Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_EES" value="1:Evaluating the Effectiveness of Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_EES" value="2:Evaluating the Effectiveness of Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_EES" value="3:Evaluating the Effectiveness of Solutions"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="dA_EES" value="4:Evaluating the Effectiveness of Solutions"></td>              
                 </tr>                              
               </tbody>
@@ -488,15 +465,15 @@
                       <li>Specification of a Data Use Policy at the Institution.</li>
                     </ul>  
                   </td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="lPE_lPE" value="0:Legislation, Privacy, and Ethics"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="lPE_lPE" value="1:Legislation, Privacy, and Ethics"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="lPE_lPE" value="2:Legislation, Privacy, and Ethics"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="lPE_lPE" value="3:Legislation, Privacy, and Ethics"></td>
-                  <td><input class="custom-control-input" type="radio"  required
+                  <td><input class="form-check" type="radio"  
                       v-model="lPE_lPE" value="4:Legislation, Privacy, and Ethics"></td>              
                 </tr>
               </tbody>
@@ -555,7 +532,7 @@ export default {
   created() {
     this.institutionName= "",
     this.yourPosition= ""  
-  },    
+  },  
   methods: {
     getIndex() {
       return ++this.index
@@ -590,6 +567,9 @@ export default {
       if ( this.institutionName == "" ) {
         this.institutionName = 'Não informado'
       }
+      if ( this.yourPosition == "" ) {
+        this.yourPosition = 'Não informado'
+      }      
 
       //Preparação dos dados
       this.values= ""
