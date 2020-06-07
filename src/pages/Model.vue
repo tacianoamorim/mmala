@@ -38,12 +38,15 @@
           <div class="col-9">
               <div class="tab-content" id="nav-tabContent">
                   <div v-for="(processArea, i) in processAreas" :key="processArea" 
-                      :class="`tab-pane fade ${getActivePainel(i)}`" 
-                      :id="'list-L'+i" 
-                      role="tabpanel" :aria-labelledby="'list-PA'+i" >
-                      <LayoutProcessArea :processAera="processArea"/>     
+                    :class="`tab-pane fade ${getActivePainel(i)}`" 
+                    :id="'list-L'+i" 
+                    role="tabpanel" :aria-labelledby="'list-PA'+i" >
+                    <LayoutProcessArea :processAera="processArea" :category="categorySel" />     
                   </div>
                 </div>
+          </div>
+          <div v-if="processAreas.length == 0" class="alert alert-info" role="alert">
+              Category without connected process area
           </div>
       </div>   
     </div>
@@ -62,7 +65,7 @@ export default {
   },   
   data: () => ({
     categories: [],
-    categorySel: String,
+    categorySel: Object,
     processAreas: [],
     processAreaSel: []
   }),
@@ -77,18 +80,18 @@ export default {
   methods: {
     getActive: function (index) {
       if (index == 0) 
-          return "active" 
+        return "active" 
       else
-          return "" 
+        return "" 
     },
     getActivePainel: function (index) {
       if (index == 0) 
-          return "show active" 
+        return "show active" 
       else
-          return "" 
+        return "" 
     },    
     getData() {
-      this.$root.$emit('Spinner::show')
+      //this.$root.$emit('Spinner::show')
       let self = this
       this.categories= []
       this.processAreas= []
@@ -100,12 +103,9 @@ export default {
           querySnapshot.forEach(function(doc) {
             self.categories.push(doc.data());
             //category selected in page load
-            console.log("***** db.collection('categories')")
-            console.log("***** Self.categoryId : "+self.categoryId)
-            console.log("***** Doc.data().id   : "+doc.data().id)
             if ( self.categoryId == doc.data().id ) {
-                self.categorySel= doc.data();
-                console.log(self.categorySel.description)
+              self.categorySel= doc.data();
+              //console.log(self.categorySel.description)
             }
         });
       });
@@ -115,21 +115,15 @@ export default {
         .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
             //category selected in page load
-            console.log("******* db.collection('processAreas')")
-            console.log("******* Self.categorySel.id : "+self.categorySel.id)
-            console.log("******* Doc.data().category : "+doc.data().category)            
             if ( doc.data().category == self.categorySel.id ) {
-                self.processAreas.push(doc.data());
-                self.processAreaSel= doc.data();
-                console.log(self.processAreaSel)
+              self.processAreas.push(doc.data());
+              self.processAreaSel= doc.data();
+              //console.log(self.processAreaSel)
             }
         });
       }); 
-      this.$root.$emit('Spinner::hide')
+      //this.$root.$emit('Spinner::hide')
     }, 
-    viewCategory: function (id) {
-      alert(id)
-    },
     categoryUpdate: function (id) {
       this.categoryId= id
       this.getData()

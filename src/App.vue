@@ -1,7 +1,6 @@
 <template>
   <div id="app-5">
-    <base-spinner/>
-    <layout-notification/>
+    <LayoutNotification/>
 
     <main class="main">  
 
@@ -30,16 +29,11 @@
 </template>
 
 <script>
-import BaseSpinner from './components/global/BaseSpinner'
 import LayoutNotification from './components/layout/LayoutNotification'
 export default {
   name: 'App',
   components: {
-    BaseSpinner,
     LayoutNotification
-  },
-   mounted () {
-      this.$root.$emit('Spinner::hide')
   }
 }
 </script>

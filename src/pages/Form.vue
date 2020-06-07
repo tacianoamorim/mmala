@@ -4,7 +4,8 @@
       <div class="container fontePadrao .group" style="display: flex;flex-wrap: wrap;">
         <div id="divLateral">
           <h1>Make this self-assessment and discover the maturity 
-            level of your Institution regarding Learning Analytics adoption.</h1>
+            level of your Institution regarding Learning Analytics adoption.
+          </h1>
         </div>
         <div id="divA">
             <img src="../assets/img/checklist.png" height="400" width="400">
@@ -14,7 +15,7 @@
     <section>
      <div class="container">
       <h1 class="title">Search form</h1>
-      <form @submit.prevent="submit()" class="was-validated">
+      <form class="was-validated">
         <div class="row">
           <div class="col-md-12">
             <h3>Inform your Higher Education Institution and your 
@@ -33,14 +34,14 @@
         <div class="form-group row">
           <label for="institutionName:" class="col-sm-2 col-form-label"><b>Institution name</b></label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" v-model="institutionName"  
+            <input type="text" class="form-control" maxlength="100" v-model="institutionName"  
               id="institutionName" value="">
           </div>
         </div>
         <div class="form-group row">
           <label for="yourPosition" class="col-sm-2 col-form-label"><b>Your position</b></label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" v-model="yourPosition" 
+            <input type="text" class="form-control" maxlength="100" v-model="yourPosition" 
               id="yourPosition" value="">
           </div>
         </div>        
@@ -72,31 +73,16 @@
                       <li>Assessment of data acquisition costs.  </li>
                     </ul>  
                   </td>
-                  <td>
-                      <input class="form-check" type="radio" 
-                        v-model="dM_DA" :id="'dM_DA'+this.getIndex()"
-                        name="dM_DA" value="0:Data Acquisition" alt ="alt">
-                  </td>
-                  <td>
-                      <input class="form-check" type="radio" 
-                        v-model="dM_DA" :id="'dM_DA'+this.getIndex()"
-                        name="dM_DA" value="1:Data Acquisition">
-                  </td>
-                  <td>
-                      <input class="form-check" type="radio" 
-                        v-model="dM_DA"  :id="'dM_DA'+this.getIndex()" 
-                        name="dM_DA" value="2:Data Acquisition">
-                  </td>
-                  <td>
-                    <input class="form-check" type="radio" 
-                      v-model="dM_DA"  :id="'dM_DA'+this.getIndex()" name="dM_DA" 
-                      value="3:Data Acquisition">
-                  </td>
-                  <td>
-                      <input class="form-check" type="radio" 
-                        v-model="dM_DA"  :id="'dM_DA'+this.getIndex()" name="dM_DA" 
-                        value="4:Data Acquisition">
-                   </td>                                                                        
+                  <td><input class="form-check" type="radio"  
+                      v-model="dM_DA" value="DM_DA:#008000:0:Data Acquisition"></td>
+                  <td><input class="form-checkt" type="radio"  
+                      v-model="dM_DA" value="DM_DA:#008000:1:Data Acquisition"></td>
+                  <td><input class="form-check" type="radio"  
+                      v-model="dM_DA" value="DM_DA:#008000:2:Data Acquisition"></td>
+                  <td><input class="form-check" type="radio"  
+                      v-model="dM_DA" value="DM_DA:#008000:3:Data Acquisition"></td>
+                  <td><input class="form-check" type="radio"  
+                      v-model="dM_DA" value="DM_DA:#008000:4:Data Acquisition"></td>                     
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -108,15 +94,15 @@
                     </ul>  
                   </td>                  
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DQ" value="0:Data Quality"></td>
+                      v-model="dM_DQ" value="DM_DQ:#008000:0:Data Quality"></td>
                   <td><input class="form-checkt" type="radio"  
-                      v-model="dM_DQ" value="1:Data Quality"></td>
+                      v-model="dM_DQ" value="DM_DQ:#008000:1:Data Quality"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DQ" value="2:Data Quality"></td>
+                      v-model="dM_DQ" value="DM_DQ:#008000:2:Data Quality"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DQ" value="3:Data Quality"></td>
+                      v-model="dM_DQ" value="DM_DQ:#008000:3:Data Quality"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DQ" value="4:Data Quality"></td>              
+                      v-model="dM_DQ" value="DM_DQ:#008000:4:Data Quality"></td>              
                 </tr>   
                 <tr>
                   <td class="titleTD">
@@ -128,15 +114,15 @@
                     </ul>  
                   </td>                   
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="0:Data Ownership"></td>
+                      v-model="dM_DO" value="DM_DO:#008000:0:Data Ownership"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="1:Data Ownership"></td>
+                      v-model="dM_DO" value="DM_DO:#008000:1:Data Ownership"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="2:Data Ownership"></td>
+                      v-model="dM_DO" value="DM_DO:#008000:2:Data Ownership"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="3:Data Ownership"></td>
+                      v-model="dM_DO" value="DM_DO:#008000:3:Data Ownership"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="4:Data Ownership"></td>              
+                      v-model="dM_DO" value="DM_DO:#008000:4:Data Ownership"></td>              
                 </tr>   
                 <tr>
                   <td class="titleTD">
@@ -151,15 +137,15 @@
                     </ul>  
                   </td>                   
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="0:Infrastructure"></td>
+                      v-model="dM_INF" value="DM_INF:#008000:0:Infrastructure"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="1:Infrastructure"></td>
+                      v-model="dM_INF" value="DM_INF:#008000:1:Infrastructure"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="2:Infrastructure"></td>
+                      v-model="dM_INF" value="DM_INF:#008000:2:Infrastructure"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="3:Infrastructure"></td>
+                      v-model="dM_INF" value="DM_INF:#008000:3:Infrastructure"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="4:Infrastructure"></td>              
+                      v-model="dM_INF" value="DM_INF:#008000:4:Infrastructure"></td>              
                 </tr>                                             
               </tbody>
             </table>
@@ -190,15 +176,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="0:Funding"></td>
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:0:Funding"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="1:Funding"></td>
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:1:Funding"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="2:Funding"></td>
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:2:Funding"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="3:Funding"></td>
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:3:Funding"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="4:Funding"></td>              
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:4:Funding"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -209,15 +195,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="0:Leadership"></td>
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:0:Leadership"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="1:Leadership"></td>
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:1:Leadership"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="2:Leadership"></td>
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:2:Leadership"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="3:Leadership"></td>
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:3:Leadership"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="4:Leadership"></td>              
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:4:Leadership"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -228,15 +214,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="0:Stakeholders’ Identification and Involvement"></td>
+                      v-model="aT_SII" value="AT_SII:#FFF000:0:Stakeholders’ Identification and Involvement"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="1:Stakeholders’ Identification and Involvement"></td>
+                      v-model="aT_SII" value="AT_SII:#FFF000:1:Stakeholders’ Identification and Involvement"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="2:Stakeholders’ Identification and Involvement"></td>
+                      v-model="aT_SII" value="AT_SII:#FFF000:2:Stakeholders’ Identification and Involvement"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="3:Stakeholders’ Identification and Involvement"></td>
+                      v-model="aT_SII" value="AT_SII:#FFF000:3:Stakeholders’ Identification and Involvement"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="4:Stakeholders’ Identification and Involvement"></td>              
+                      v-model="aT_SII" value="AT_SII:#FFF000:4:Stakeholders’ Identification and Involvement"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -248,15 +234,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="0:Communication"></td>
+                      v-model="aT_COM" value="AT_COM:#FFF000:0:Communication"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="1:Communication"></td>
+                      v-model="aT_COM" value="AT_COM:#FFF000:1:Communication"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="2:Communication"></td>
+                      v-model="aT_COM" value="AT_COM:#FFF000:2:Communication"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="3:Communication"></td>
+                      v-model="aT_COM" value="AT_COM:#FFF000:3:Communication"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="4:Communication"></td>              
+                      v-model="aT_COM" value="AT_COM:#FFF000:4:Communication"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -269,15 +255,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="0:Stakeholders’ Training"></td>
+                      v-model="aT_ST" value="AT_ST:#FFF000:0:Stakeholders’ Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="1:Stakeholders’ Training"></td>
+                      v-model="aT_ST" value="AT_ST:#FFF000:1:Stakeholders’ Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="2:Stakeholders’ Training"></td>
+                      v-model="aT_ST" value="AT_ST:#FFF000:2:Stakeholders’ Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="3:Stakeholders’ Training"></td>
+                      v-model="aT_ST" value="AT_ST:#FFF000:3:Stakeholders’ Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="4:Stakeholders’ Training"></td>              
+                      v-model="aT_ST" value="AT_ST:#FFF000:4:Stakeholders’ Training"></td>              
                 </tr>                                                                
               </tbody>
             </table>
@@ -308,15 +294,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="0:Pedagogical Planning of Solutions"></td>
+                      v-model="pS_PPS" value="PS_PPS:#800080:0:Pedagogical Planning of Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="1:Pedagogical Planning of Solutions"></td>
+                      v-model="pS_PPS" value="PS_PPS:#800080:1:Pedagogical Planning of Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="2:Pedagogical Planning of Solutions"></td>
+                      v-model="pS_PPS" value="PS_PPS:#800080:2:Pedagogical Planning of Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="3:Pedagogical Planning of Solutions"></td>
+                      v-model="pS_PPS" value="PS_PPS:#800080:3:Pedagogical Planning of Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="4:Pedagogical Planning of Solutions"></td>              
+                      v-model="pS_PPS" value="PS_PPS:#800080:4:Pedagogical Planning of Solutions"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -328,15 +314,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="0:Support in Interpreting Results"></td>
+                      v-model="pS_SIR" value="PS_SIR:#800080:0:Support in Interpreting Results"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="1:Support in Interpreting Results"></td>
+                      v-model="pS_SIR" value="PS_SIR:#800080:1:Support in Interpreting Results"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="2:Support in Interpreting Results"></td>
+                      v-model="pS_SIR" value="PS_SIR:#800080:2:Support in Interpreting Results"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="3:Support in Interpreting Results"></td>
+                      v-model="pS_SIR" value="PS_SIR:#800080:3:Support in Interpreting Results"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="4:Support in Interpreting Results"></td>              
+                      v-model="pS_SIR" value="PS_SIR:#800080:4:Support in Interpreting Results"></td>              
                 </tr>     
                 <tr>
                   <td class="titleTD">
@@ -348,15 +334,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="0:Result-based Intervention"></td>
+                      v-model="pS_RI" value="PS_RI:#800080:0:Result-based Intervention"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="1:Result-based Intervention"></td>
+                      v-model="pS_RI" value="PS_RI:#800080:1:Result-based Intervention"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="2:Result-based Intervention"></td>
+                      v-model="pS_RI" value="PS_RI:#800080:2:Result-based Intervention"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="3:Result-based Intervention"></td>
+                      v-model="pS_RI" value="PS_RI:#800080:3:Result-based Intervention"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="4:Result-based Intervention"></td>              
+                      v-model="pS_RI" value="PS_RI:#800080:4:Result-based Intervention"></td>              
                 </tr>                              
               </tbody>
             </table>
@@ -387,15 +373,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="0:Development of Own Solutions"></td>
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:0:Development of Own Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="1:Development of Own Solutions"></td>
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:1:Development of Own Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="2:Development of Own Solutions"></td>
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:2:Development of Own Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="3:Development of Own Solutions"></td>
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:3:Development of Own Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="4:Development of Own Solutions"></td>              
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:4:Development of Own Solutions"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -408,15 +394,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="0:Acquisition of Ready-made Solutions"></td>
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:0:Acquisition of Ready-made Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="1:Acquisition of Ready-made Solutions"></td>
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:1:Acquisition of Ready-made Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="2:Acquisition of Ready-made Solutions"></td>
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:2:Acquisition of Ready-made Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="3:Acquisition of Ready-made Solutions"></td>
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:3:Acquisition of Ready-made Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="4:Acquisition of Ready-made Solutions"></td>              
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:4:Acquisition of Ready-made Solutions"></td>              
                 </tr>     
                 <tr>
                   <td class="titleTD">
@@ -428,15 +414,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="0:Evaluating the Effectiveness of Solutions"></td>
+                      v-model="dA_EES" value="DA_EES:#0000FF:0:Evaluating the Effectiveness of Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="1:Evaluating the Effectiveness of Solutions"></td>
+                      v-model="dA_EES" value="DA_EES:#0000FF:1:Evaluating the Effectiveness of Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="2:Evaluating the Effectiveness of Solutions"></td>
+                      v-model="dA_EES" value="DA_EES:#0000FF:2:Evaluating the Effectiveness of Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="3:Evaluating the Effectiveness of Solutions"></td>
+                      v-model="dA_EES" value="DA_EES:#0000FF:3:Evaluating the Effectiveness of Solutions"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="4:Evaluating the Effectiveness of Solutions"></td>              
+                      v-model="dA_EES" value="DA_EES:#0000FF:4:Evaluating the Effectiveness of Solutions"></td>              
                 </tr>                              
               </tbody>
             </table>
@@ -466,15 +452,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_lPE" value="0:Legislation, Privacy, and Ethics"></td>
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:0:Legislation, Privacy, and Ethics"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_lPE" value="1:Legislation, Privacy, and Ethics"></td>
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:1:Legislation, Privacy, and Ethics"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_lPE" value="2:Legislation, Privacy, and Ethics"></td>
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:2:Legislation, Privacy, and Ethics"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_lPE" value="3:Legislation, Privacy, and Ethics"></td>
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:3:Legislation, Privacy, and Ethics"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_lPE" value="4:Legislation, Privacy, and Ethics"></td>              
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:4:Legislation, Privacy, and Ethics"></td>              
                 </tr>
               </tbody>
             </table>
@@ -483,7 +469,10 @@
 
         <div class="row buttonSubmit">
           <div class="col-md-12">
-            <button class="btn btn-success btn-lg">Evaluate your Higher Education Institution regarding the maturity in adopting LA</button> 
+            <button class="btn btn-success btn-lg" @click="submit()">
+              Evaluate your Higher Education Institution 
+              regarding the maturity in adopting LA
+            </button> 
           </div>
         </div>
       </form>
@@ -493,7 +482,9 @@
 </template>
 
 <script>
+
 import router from '../router'
+import db from '../firebase'
 
 export default {
   name: "app",
@@ -501,6 +492,11 @@ export default {
     index: 0,
     values: String,
     labels: String,
+    colors: String,
+    ids: String,
+
+    idsArray: [],
+    valArray: [],
 
     institutionName: String,
     yourPosition: String,
@@ -524,14 +520,14 @@ export default {
     dA_ARS: null,
     dA_EES: null,
 
-    lPE_lPE: null,
+    lPE_LPE: null,
 
     dArray: []
 
   }),
   created() {
-    this.institutionName= "",
-    this.yourPosition= ""  
+    this.institutionName= ""
+    this.yourPosition= ""
   },  
   methods: {
     getIndex() {
@@ -542,27 +538,23 @@ export default {
     },    
     submit() {
 
+      let self = this
+
+      console.log("submit")
+
+      let message = 'Select the maturity level for each process area'
+
       if ( this.dM_DA== null || this.dM_DQ== null || 
-          this.dM_DO== null || this.dM_INF== null || 
-          this.aT_FUN== null || this.aT_LEA== null || 
-          this.aT_SII== null || this.aT_COM== null || 
-          this.aT_ST== null || this.pS_PPS== null || 
-          this.pS_SIR== null || this.pS_RI== null || 
-          this.dA_DOS== null || this.dA_ARS== null || 
-          this.dA_EES== null || this.lPE_lPE== null ) {
-            return
+           this.dM_DO== null || this.dM_INF== null || 
+           this.aT_FUN== null || this.aT_LEA== null || 
+           this.aT_SII== null || this.aT_COM== null || 
+           this.aT_ST== null || this.pS_PPS== null || 
+           this.pS_SIR== null || this.pS_RI== null || 
+           this.dA_DOS== null || this.dA_ARS== null || 
+           this.dA_EES== null || this.lPE_LPE== null ) {
+            this.$root.$emit('Notification::show', {message, type: 'danger'})
+           return
       }
-
-      console.log("dM_DA: "+ this.dM_DA) 
-      console.log("dM_DQ: "+ this.dM_DQ)
-      console.log("dM_DO: "+ this.dM_DO)
-      console.log("dM_INF: "+ this.dM_INF)
-
-      console.log("-----------------SUBMIT FORM---------------------")
-      console.log(this.institutionName)
-      console.log(this.yourPosition)
-      console.log(this.values)
-      console.log(this.labels)
 
       if ( this.institutionName == "" ) {
         this.institutionName = 'Não informado'
@@ -574,116 +566,182 @@ export default {
       //Preparação dos dados
       this.values= ""
       this.labels= ""
+      this.colors= ""
+      this.ids   = ""
+
+      let ind= 0;
 
       // - - - - - DM - -- - - - - - - - - 
       if ( this.dM_DA != null ) {
         this.dArray= this.dM_DA.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]        
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2] 
       }
       if ( this.dM_DQ != null ) {
-        console.log(":> "+ this.dM_DQ)
         this.dArray= this.dM_DQ.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]           
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]          
       }
       if ( this.dM_DO != null ) {
         this.dArray= this.dM_DO.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]             
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]             
       }
       if ( this.dM_INF != null ) {
         this.dArray= this.dM_INF.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]         
       }    
 
       // - - - - - AT - -- - - - - - - - - 
       if ( this.aT_FUN != null ) {
         this.dArray= this.aT_FUN.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]       
       }    
       if ( this.aT_LEA != null ) {
         this.dArray= this.aT_LEA.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]            
       }    
       if ( this.aT_SII != null ) {
         this.dArray= this.aT_SII.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]          
       }          
       if ( this.aT_COM != null ) {
         this.dArray= this.aT_COM.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]         
       }    
       if ( this.aT_ST != null ) {
         this.dArray= this.aT_ST.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]  
       }    
 
       // - - - - - PS - -- - - - - - - - - 
       if ( this.pS_PPS != null ) {
         this.dArray= this.pS_PPS.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]         
       }    
       if ( this.pS_SIR != null ) {
         this.dArray= this.pS_SIR.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]        
       }    
       if ( this.pS_RI != null ) {
         this.dArray= this.pS_RI.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]         
       }  
 
       // - - - - - DA - -- - - - - - - - - 
       if ( this.dA_DOS != null ) {
         this.dArray= this.dA_DOS.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]           
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]            
       }
       if ( this.dA_ARS != null ) {
         this.dArray= this.dA_ARS.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]             
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]                 
       }
       if ( this.dA_EES != null ) {
         this.dArray= this.dA_EES.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]        
       }  
 
       // - - - - - LPE - -- - - - - - - - - 
-      if ( this.lPE_lPE != null ) {
-        this.dArray= this.lPE_lPE.split(":")
-        this.values= this.values +";"+ this.dArray[0]
-        this.labels= this.labels +";"+ this.dArray[1]         
+      if ( this.lPE_LPE != null ) {
+        this.dArray= this.lPE_LPE.split(":")
+        this.values= this.values +";"+ this.dArray[2]
+        this.labels= this.labels +";"+ this.dArray[3]  
+        this.colors= this.colors +";"+ this.dArray[1]   
+        this.idsArray[ind]  = this.dArray[0]    
+        this.valArray[ind++]= this.dArray[2]           
       }
 
-      console.log("-----------------ORIGINAL---------------------------")
-      console.log(this.values)
-      console.log(this.labels)
-      console.log("------------------CORTANDO--------------------------")
       this.values= this.values.substring(1, this.values.length)
       this.labels= this.labels.substring(1, this.labels.length)
-      this.institutionName= this.institutionName +" - "+ this.yourPosition
-      console.log("-----------------RESULTADO---------------------------")
-      console.log(this.values)
-      console.log(this.labels)
-      console.log(this.institutionName)
-      console.log("--------------------------------------------")
+      this.colors= this.colors.substring(1, this.colors.length)
 
-      router.push({ name: 'graphic', params: { 
-        pLabels: this.labels, 
-        pValues: this.values,
-        pInstitution: this.institutionName 
-      } }) 
+      let x;
+      let aItems= [];
+      for (x = 0; x < this.idsArray.length; x++) {
+        aItems[x] =  this.idsArray[x] +":"+ this.valArray[x];          
+      }      
+
+      // date register
+      // Add a new document in collection "cities"
+      var d = new Date();
+      db.collection("answers").add({
+          institutionName: self.institutionName,
+          yourPosition: self.yourPosition,
+          items: aItems,
+          date: (d.getMonth()+1) +"/"+ d.getDate() +"/"+ d.getFullYear()
+      })
+      .then(function() {
+        // Prepara os dados para exibicao
+        console.log(self.institutionName)
+        router.push({ name: 'graphic', params: { 
+          pLabels: self.labels, 
+          pValues: self.values,
+          pInstitution: self.institutionName, 
+          pYourPosition: self.yourPosition,
+          pColors: self.colors
+        } }) 
+      })
+      .catch(function(error) {
+          console.error("Error writing document: ", error);
+      });      
     },
   }
 }

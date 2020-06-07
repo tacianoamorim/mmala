@@ -21,7 +21,7 @@ const routes = [
     props: true
   },
   {
-    path: '/graphic/:pLabels/:pValues/:pInstitution',
+    path: '/graphic/:pLabels/:pValues/:pInstitution/:pYourPosition/:pColors',
     name: 'graphic',
     component:  () => import('./pages/Graphic.vue'),
     props: true
@@ -31,7 +31,12 @@ const routes = [
     name: 'model',
     component: () => import(/* webpackChunkName: "model" */'./pages/Model.vue'),
     props: true
-  } 
+  },
+  {
+    path: '/formLoad',
+    name: 'formLoad',
+    component: () => import('./pages/FormLoad.vue')
+  }   
 ]
 
 const router = new VueRouter({

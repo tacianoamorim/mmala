@@ -102,13 +102,13 @@
      <div class="row featurette">
         <div class="col-md-8 order-md-1">
           <h1 class="label darkLabel">Process Area</h1>
-          <p class="text darkText" >
+          <p class="text darkText" style="font-size: 25px">
             Each process area is composed of its purpose, goals, related process areas, 
             and functional practices (grouped in levels 1 to 4). Each level also 
             describes examples of work products resulting from the institutionalization 
             of the respective maturity level. 
           </p>
-          <p class="text darkText">
+          <p class="text darkText" style="font-size: 25px">
             MMALA intends to describe the necessary activities to a Higher Education 
             institution to adopt LA and gradually achieve higher maturity levels in 
             this field. MMALA is composed of categories and process areas.

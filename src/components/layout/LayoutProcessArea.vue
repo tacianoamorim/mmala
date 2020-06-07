@@ -7,7 +7,7 @@
             <div class="card-body">
               <p class="card-text">
                 <span class="label">Category: </span><br>
-                <span class="text">{{processAera.category}}</span><br>
+                <span class="text">{{category.description}}</span><br>
 
                 <span class="label">Process Area: </span><br>
                 <span class="text">{{processAera.description}}</span><br>
@@ -20,6 +20,15 @@
                   <ul>
                     <li v-for="(goal, i) in processAera.goals" :key="'A'+i">
                         {{ goal }}
+                    </li>  
+                  </ul>
+                </span>
+
+                <span class="label">Related Processes Areas: </span><br>
+                <span class="text">
+                  <ul>
+                    <li v-for="(relatedProcessArea, i) in processAera.relatedProcessesAreas" :key="'rPA'+i">
+                        {{ relatedProcessArea }}
                     </li>  
                   </ul>
                 </span>
@@ -45,7 +54,8 @@ export default {
     LayoutMaturityLevel
   },  
   props: {
-    processAera: Object
+    processAera: Object,
+    category: Object
   }   
 }
 </script>
@@ -64,5 +74,6 @@ span {
 }
 .text {
   margin-bottom: 20px;
+  padding-bottom: 30px;
 }
 </style>

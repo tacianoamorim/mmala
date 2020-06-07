@@ -11,18 +11,12 @@
       </div>
     </section>      
     <section>
-     <div class="container">
-        <div style="margin: 30px;">
-          <VueApexCharts type="radar" width="100%" 
-            :options="options" 
-            :series="series">
-          </VueApexCharts>
-        </div>
-      </div>         
-     <div class="container">        
-        <button type="button" @click="newSearch()" 
-          class="btn btn-success btn-lg divButton">New search</button>
-      </div> 
+      <VueApexCharts type="radar" width="100%" 
+        :options="options" 
+        :series="series">
+      </VueApexCharts>
+      <button type="button" @click="newSearch()" 
+        class="btn btn-success btn-lg divButton">New search</button>
   </section>          
 </div>
 </template>
@@ -40,9 +34,35 @@ export default {
   props: {
     pLabels: String, 
     pValues: String,
-    pInstitution: String 
+    pColors: String,
+    pInstitution: String,
+    pYourPosition: String
   },  
   data: function() {
+//   console.log("data()")
+//    console.log( this.pInstitution )
+//    console.log( this.pYourPosition )
+//    console.log( this.pLabels )
+//    console.log( this.pValues )
+//    console.log( this.pColors )
+
+    let aColors= this.pColors.split(";");
+    let discretes= [aColors.length];
+
+    let ind;
+    for (ind = 0; ind < aColors.length; ind++) {
+      var disc= 
+        {
+          seriesIndex: 0,
+          dataPointIndex: ind,
+          fillColor: aColors[ind],
+          strokeColor: aColors[ind],
+          size: 4
+        } ;   
+      discretes[ind]= disc;
+    }
+//    console.log( discretes );
+
     return {
       series: [{
         name: 'Maturity',
@@ -52,33 +72,33 @@ export default {
         title: {
           text: this.pInstitution,
           align: 'center',
+          offsetY: 10,
           style: {
             fontFamily: 'Helvetica, Arial, sans-serif',
             fontWeight: 600,
             cssClass: 'apexcharts-yaxis-title',
-            fontSize:  '28px',
-            color:  '#6B7A8F'              
+            fontSize:  '22px',
+            color:  '#6B7A8F'
           },
         },
+        subtitle: {
+            text: this.pYourPosition,
+            align: 'center',
+            offsetY: 45,
+            style: {
+              fontSize: '18px',
+              fontWeight: 'normal',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              color:  '#9699a2'
+            },
+        },        
         markers: {
           strokeColors: '#fff',
           strokeWidth: 2,
           strokeOpacity: 0.9,
           strokeDashArray: 3,
           fillOpacity: 1,
-          discrete: [{
-            seriesIndex: 0,
-            dataPointIndex: 7,
-            fillColor: '#e3e3e3',
-            strokeColor: '#fff',
-            size: 5
-          },{
-            seriesIndex: 0,
-            dataPointIndex: 5,
-            fillColor: '#e3e3e3',
-            strokeColor: '#fff',
-            size: 5
-          }],
+          discrete: discretes,
         },        
         legend: {
           show: true,
@@ -131,6 +151,18 @@ export default {
             }
           }              
         }        
+      },
+      noData: {
+        text: "No data",
+        align: 'center',
+        verticalAlign: 'middle',
+        offsetX: 0,
+        offsetY: 0,
+        style: {
+          color: undefined,
+          fontSize: '28px',
+          fontFamily: 'Helvetica, Arial, sans-serif'
+        }
       }
     }
   },  

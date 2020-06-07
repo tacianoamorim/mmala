@@ -1,6 +1,9 @@
 <template>
-  <div v-if="show" :class="`alert-${type}`"
-    class="alert alert-dismissible fade show">
+  <div
+    v-if="show"
+    :class="`alert-${type}`"
+    class="alert alert-dismissible fade show"
+  >
     {{ message }}
     <button type="button" class="close" @click="close()">
       <span>&times;</span>
@@ -20,6 +23,7 @@ export default {
       this.show = true
       this.type = payload.type
       this.message = payload.message
+
       setTimeout(() => { this.close() }, payload.timeout || 4000)
     })
   },
