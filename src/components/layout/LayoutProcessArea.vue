@@ -32,11 +32,22 @@
                     </li>  
                   </ul>
                 </span>
-
-                <LayoutMaturityLevel tCard="danger"  nLevel="1" :tLevel="processAera.level01"/>
-                <LayoutMaturityLevel tCard="warning" nLevel="2" :tLevel="processAera.level02"/>
-                <LayoutMaturityLevel tCard="primary" nLevel="3" :tLevel="processAera.level03"/>
-                <LayoutMaturityLevel tCard="success" nLevel="4" :tLevel="processAera.level04"/>
+                <LayoutMaturityLevel tCard="danger"  nLevel="1" dLevel="Ad hoc"
+                  :tLevel="processAera.level01" 
+                  :tWork="processAera.level01Examples" 
+                  :tExample="processAera.level01WorkProducts"/>
+                <LayoutMaturityLevel tCard="warning" nLevel="2" dLevel="Initial" 
+                  :tLevel="processAera.level02" 
+                  :tWork="processAera.level02Examples" 
+                  :tExample="processAera.level02WorkProducts"/>
+                <LayoutMaturityLevel tCard="primary" nLevel="3" dLevel="Structured" 
+                  :tLevel="processAera.level03" 
+                  :tWork="processAera.level03Examples" 
+                  :tExample="processAera.level03WorkProducts"/>
+                <LayoutMaturityLevel tCard="success" nLevel="4" dLevel="Systematic" 
+                  :tLevel="processAera.level04" 
+                  :tWork="processAera.level04Examples" 
+                  :tExample="processAera.level04WorkProducts"/>
               </p>
             </div>
           </div>

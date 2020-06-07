@@ -95,22 +95,21 @@ export default {
       let self = this
       this.categories= []
       this.processAreas= []
-      console.log("*** getData()")
       
       // get categories
-      db.collection("categories").get()
+      db.collection("categories").orderBy("order").get()
         .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
             self.categories.push(doc.data());
             //category selected in page load
             if ( self.categoryId == doc.data().id ) {
               self.categorySel= doc.data();
-              //console.log(self.categorySel.description)
             }
         });
       });
 
       // get process areas
+      self.processAreas= []
       db.collection("processAreas").get()
         .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
@@ -118,7 +117,7 @@ export default {
             if ( doc.data().category == self.categorySel.id ) {
               self.processAreas.push(doc.data());
               self.processAreaSel= doc.data();
-              //console.log(self.processAreaSel)
+              console.log(self.processAreaSel)
             }
         });
       }); 

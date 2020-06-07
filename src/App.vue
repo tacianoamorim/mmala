@@ -12,7 +12,7 @@
             <div class="col-2">
             </div>
             <div class="col-3">
-              <router-link to="/model/AT" class="btn btn-info btn-sm top" 
+              <router-link to="/model/DM" class="btn btn-info btn-sm top" 
                 style="background-color: #6B7A8F;">Discover MMALA</router-link>              
             </div>
             <div class="col-5">
