@@ -73,10 +73,9 @@ export default {
     categoryId: String
   },
   created() {
-    console.log("* Created() -> Category: " + this.category)
+    //console.log("* Created() -> Category: " + this.category)
     this.getData()
   },  
-
   methods: {
     getActive: function (index) {
       if (index == 0) 
@@ -117,7 +116,6 @@ export default {
             if ( doc.data().category == self.categorySel.id ) {
               self.processAreas.push(doc.data());
               self.processAreaSel= doc.data();
-              console.log(self.processAreaSel)
             }
         });
       }); 

@@ -74,15 +74,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DA" value="DM_DA:#008000:0:Data Acquisition"></td>
+                      v-model="dM_DA" value="DM_DA:#008000:0:Data Acquisition:Data Management"></td>
                   <td><input class="form-checkt" type="radio"  
-                      v-model="dM_DA" value="DM_DA:#008000:1:Data Acquisition"></td>
+                      v-model="dM_DA" value="DM_DA:#008000:1:Data Acquisition:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DA" value="DM_DA:#008000:2:Data Acquisition"></td>
+                      v-model="dM_DA" value="DM_DA:#008000:2:Data Acquisition:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DA" value="DM_DA:#008000:3:Data Acquisition"></td>
+                      v-model="dM_DA" value="DM_DA:#008000:3:Data Acquisition:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DA" value="DM_DA:#008000:4:Data Acquisition"></td>                     
+                      v-model="dM_DA" value="DM_DA:#008000:4:Data Acquisition:Data Management"></td>                     
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -94,15 +94,15 @@
                     </ul>  
                   </td>                  
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DQ" value="DM_DQ:#008000:0:Data Quality"></td>
+                      v-model="dM_DQ" value="DM_DQ:#008000:0:Data Quality:Data Management"></td>
                   <td><input class="form-checkt" type="radio"  
-                      v-model="dM_DQ" value="DM_DQ:#008000:1:Data Quality"></td>
+                      v-model="dM_DQ" value="DM_DQ:#008000:1:Data Quality:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DQ" value="DM_DQ:#008000:2:Data Quality"></td>
+                      v-model="dM_DQ" value="DM_DQ:#008000:2:Data Quality:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DQ" value="DM_DQ:#008000:3:Data Quality"></td>
+                      v-model="dM_DQ" value="DM_DQ:#008000:3:Data Quality:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DQ" value="DM_DQ:#008000:4:Data Quality"></td>              
+                      v-model="dM_DQ" value="DM_DQ:#008000:4:Data Quality:Data Management"></td>              
                 </tr>   
                 <tr>
                   <td class="titleTD">
@@ -114,15 +114,15 @@
                     </ul>  
                   </td>                   
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="DM_DO:#008000:0:Data Ownership"></td>
+                      v-model="dM_DO" value="DM_DO:#008000:0:Data Ownership:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="DM_DO:#008000:1:Data Ownership"></td>
+                      v-model="dM_DO" value="DM_DO:#008000:1:Data Ownership:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="DM_DO:#008000:2:Data Ownership"></td>
+                      v-model="dM_DO" value="DM_DO:#008000:2:Data Ownership:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="DM_DO:#008000:3:Data Ownership"></td>
+                      v-model="dM_DO" value="DM_DO:#008000:3:Data Ownership:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_DO" value="DM_DO:#008000:4:Data Ownership"></td>              
+                      v-model="dM_DO" value="DM_DO:#008000:4:Data Ownership:Data Management"></td>              
                 </tr>   
                 <tr>
                   <td class="titleTD">
@@ -137,15 +137,15 @@
                     </ul>  
                   </td>                   
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="DM_INF:#008000:0:Infrastructure"></td>
+                      v-model="dM_INF" value="DM_INF:#008000:0:Infrastructure:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="DM_INF:#008000:1:Infrastructure"></td>
+                      v-model="dM_INF" value="DM_INF:#008000:1:Infrastructure:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="DM_INF:#008000:2:Infrastructure"></td>
+                      v-model="dM_INF" value="DM_INF:#008000:2:Infrastructure:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="DM_INF:#008000:3:Infrastructure"></td>
+                      v-model="dM_INF" value="DM_INF:#008000:3:Infrastructure:Data Management"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dM_INF" value="DM_INF:#008000:4:Infrastructure"></td>              
+                      v-model="dM_INF" value="DM_INF:#008000:4:Infrastructure:Data Management"></td>              
                 </tr>                                             
               </tbody>
             </table>
@@ -176,15 +176,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="AT_FUN:#FFF000:0:Funding"></td>
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:0:Funding:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="AT_FUN:#FFF000:1:Funding"></td>
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:1:Funding:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="AT_FUN:#FFF000:2:Funding"></td>
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:2:Funding:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="AT_FUN:#FFF000:3:Funding"></td>
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:3:Funding:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_FUN" value="AT_FUN:#FFF000:4:Funding"></td>              
+                      v-model="aT_FUN" value="AT_FUN:#FFF000:4:Funding:Administration and Training"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -195,15 +195,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="AT_LEA:#FFF000:0:Leadership"></td>
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:0:Leadership:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="AT_LEA:#FFF000:1:Leadership"></td>
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:1:Leadership:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="AT_LEA:#FFF000:2:Leadership"></td>
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:2:Leadership:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="AT_LEA:#FFF000:3:Leadership"></td>
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:3:Leadership:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_LEA" value="AT_LEA:#FFF000:4:Leadership"></td>              
+                      v-model="aT_LEA" value="AT_LEA:#FFF000:4:Leadership:Administration and Training"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -214,15 +214,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="AT_SII:#FFF000:0:Stakeholders’ Identification and Involvement"></td>
+                      v-model="aT_SII" value="AT_SII:#FFF000:0:Stakeholders’ Identification and Involvement:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="AT_SII:#FFF000:1:Stakeholders’ Identification and Involvement"></td>
+                      v-model="aT_SII" value="AT_SII:#FFF000:1:Stakeholders’ Identification and Involvement:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="AT_SII:#FFF000:2:Stakeholders’ Identification and Involvement"></td>
+                      v-model="aT_SII" value="AT_SII:#FFF000:2:Stakeholders’ Identification and Involvement:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="AT_SII:#FFF000:3:Stakeholders’ Identification and Involvement"></td>
+                      v-model="aT_SII" value="AT_SII:#FFF000:3:Stakeholders’ Identification and Involvement:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_SII" value="AT_SII:#FFF000:4:Stakeholders’ Identification and Involvement"></td>              
+                      v-model="aT_SII" value="AT_SII:#FFF000:4:Stakeholders’ Identification and Involvement:Administration and Training"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -234,15 +234,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="AT_COM:#FFF000:0:Communication"></td>
+                      v-model="aT_COM" value="AT_COM:#FFF000:0:Communication:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="AT_COM:#FFF000:1:Communication"></td>
+                      v-model="aT_COM" value="AT_COM:#FFF000:1:Communication:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="AT_COM:#FFF000:2:Communication"></td>
+                      v-model="aT_COM" value="AT_COM:#FFF000:2:Communication:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="AT_COM:#FFF000:3:Communication"></td>
+                      v-model="aT_COM" value="AT_COM:#FFF000:3:Communication:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_COM" value="AT_COM:#FFF000:4:Communication"></td>              
+                      v-model="aT_COM" value="AT_COM:#FFF000:4:Communication:Administration and Training"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -255,15 +255,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="AT_ST:#FFF000:0:Stakeholders’ Training"></td>
+                      v-model="aT_ST" value="AT_ST:#FFF000:0:Stakeholders’ Training:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="AT_ST:#FFF000:1:Stakeholders’ Training"></td>
+                      v-model="aT_ST" value="AT_ST:#FFF000:1:Stakeholders’ Training:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="AT_ST:#FFF000:2:Stakeholders’ Training"></td>
+                      v-model="aT_ST" value="AT_ST:#FFF000:2:Stakeholders’ Training:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="AT_ST:#FFF000:3:Stakeholders’ Training"></td>
+                      v-model="aT_ST" value="AT_ST:#FFF000:3:Stakeholders’ Training:Administration and Training"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="aT_ST" value="AT_ST:#FFF000:4:Stakeholders’ Training"></td>              
+                      v-model="aT_ST" value="AT_ST:#FFF000:4:Stakeholders’ Training:Administration and Training"></td>              
                 </tr>                                                                
               </tbody>
             </table>
@@ -294,15 +294,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="PS_PPS:#800080:0:Pedagogical Planning of Solutions"></td>
+                      v-model="pS_PPS" value="PS_PPS:#800080:0:Pedagogical Planning of Solutions:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="PS_PPS:#800080:1:Pedagogical Planning of Solutions"></td>
+                      v-model="pS_PPS" value="PS_PPS:#800080:1:Pedagogical Planning of Solutions:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="PS_PPS:#800080:2:Pedagogical Planning of Solutions"></td>
+                      v-model="pS_PPS" value="PS_PPS:#800080:2:Pedagogical Planning of Solutions:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="PS_PPS:#800080:3:Pedagogical Planning of Solutions"></td>
+                      v-model="pS_PPS" value="PS_PPS:#800080:3:Pedagogical Planning of Solutions:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_PPS" value="PS_PPS:#800080:4:Pedagogical Planning of Solutions"></td>              
+                      v-model="pS_PPS" value="PS_PPS:#800080:4:Pedagogical Planning of Solutions:Pedagogical Support"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -314,15 +314,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="PS_SIR:#800080:0:Support in Interpreting Results"></td>
+                      v-model="pS_SIR" value="PS_SIR:#800080:0:Support in Interpreting Results:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="PS_SIR:#800080:1:Support in Interpreting Results"></td>
+                      v-model="pS_SIR" value="PS_SIR:#800080:1:Support in Interpreting Results:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="PS_SIR:#800080:2:Support in Interpreting Results"></td>
+                      v-model="pS_SIR" value="PS_SIR:#800080:2:Support in Interpreting Results:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="PS_SIR:#800080:3:Support in Interpreting Results"></td>
+                      v-model="pS_SIR" value="PS_SIR:#800080:3:Support in Interpreting Results:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_SIR" value="PS_SIR:#800080:4:Support in Interpreting Results"></td>              
+                      v-model="pS_SIR" value="PS_SIR:#800080:4:Support in Interpreting Results:Pedagogical Support"></td>              
                 </tr>     
                 <tr>
                   <td class="titleTD">
@@ -334,15 +334,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="PS_RI:#800080:0:Result-based Intervention"></td>
+                      v-model="pS_RI" value="PS_RI:#800080:0:Result-based Intervention:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="PS_RI:#800080:1:Result-based Intervention"></td>
+                      v-model="pS_RI" value="PS_RI:#800080:1:Result-based Intervention:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="PS_RI:#800080:2:Result-based Intervention"></td>
+                      v-model="pS_RI" value="PS_RI:#800080:2:Result-based Intervention:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="PS_RI:#800080:3:Result-based Intervention"></td>
+                      v-model="pS_RI" value="PS_RI:#800080:3:Result-based Intervention:Pedagogical Support"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="pS_RI" value="PS_RI:#800080:4:Result-based Intervention"></td>              
+                      v-model="pS_RI" value="PS_RI:#800080:4:Result-based Intervention:Pedagogical Support"></td>              
                 </tr>                              
               </tbody>
             </table>
@@ -373,15 +373,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="DA_DOS:#0000FF:0:Development of Own Solutions"></td>
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:0:Development of Own Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="DA_DOS:#0000FF:1:Development of Own Solutions"></td>
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:1:Development of Own Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="DA_DOS:#0000FF:2:Development of Own Solutions"></td>
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:2:Development of Own Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="DA_DOS:#0000FF:3:Development of Own Solutions"></td>
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:3:Development of Own Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_DOS" value="DA_DOS:#0000FF:4:Development of Own Solutions"></td>              
+                      v-model="dA_DOS" value="DA_DOS:#0000FF:4:Development of Own Solutions:Data Analysis"></td>              
                 </tr>
                 <tr>
                   <td class="titleTD">
@@ -394,15 +394,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="DA_ARS:#0000FF:0:Acquisition of Ready-made Solutions"></td>
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:0:Acquisition of Ready-made Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="DA_ARS:#0000FF:1:Acquisition of Ready-made Solutions"></td>
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:1:Acquisition of Ready-made Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="DA_ARS:#0000FF:2:Acquisition of Ready-made Solutions"></td>
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:2:Acquisition of Ready-made Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="DA_ARS:#0000FF:3:Acquisition of Ready-made Solutions"></td>
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:3:Acquisition of Ready-made Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_ARS" value="DA_ARS:#0000FF:4:Acquisition of Ready-made Solutions"></td>              
+                      v-model="dA_ARS" value="DA_ARS:#0000FF:4:Acquisition of Ready-made Solutions:Data Analysis"></td>              
                 </tr>     
                 <tr>
                   <td class="titleTD">
@@ -414,15 +414,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="DA_EES:#0000FF:0:Evaluating the Effectiveness of Solutions"></td>
+                      v-model="dA_EES" value="DA_EES:#0000FF:0:Evaluating the Effectiveness of Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="DA_EES:#0000FF:1:Evaluating the Effectiveness of Solutions"></td>
+                      v-model="dA_EES" value="DA_EES:#0000FF:1:Evaluating the Effectiveness of Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="DA_EES:#0000FF:2:Evaluating the Effectiveness of Solutions"></td>
+                      v-model="dA_EES" value="DA_EES:#0000FF:2:Evaluating the Effectiveness of Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="DA_EES:#0000FF:3:Evaluating the Effectiveness of Solutions"></td>
+                      v-model="dA_EES" value="DA_EES:#0000FF:3:Evaluating the Effectiveness of Solutions:Data Analysis"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="dA_EES" value="DA_EES:#0000FF:4:Evaluating the Effectiveness of Solutions"></td>              
+                      v-model="dA_EES" value="DA_EES:#0000FF:4:Evaluating the Effectiveness of Solutions:Data Analysis"></td>              
                 </tr>                              
               </tbody>
             </table>
@@ -452,15 +452,15 @@
                     </ul>  
                   </td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:0:Legislation, Privacy, and Ethics"></td>
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:0:Legislation, Privacy, and Ethics:Legislation, Privacy, and Ethics"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:1:Legislation, Privacy, and Ethics"></td>
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:1:Legislation, Privacy, and Ethics:Legislation, Privacy, and Ethics"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:2:Legislation, Privacy, and Ethics"></td>
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:2:Legislation, Privacy, and Ethics:Legislation, Privacy, and Ethics"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:3:Legislation, Privacy, and Ethics"></td>
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:3:Legislation, Privacy, and Ethics:Legislation, Privacy, and Ethics"></td>
                   <td><input class="form-check" type="radio"  
-                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:4:Legislation, Privacy, and Ethics"></td>              
+                      v-model="lPE_LPE" value="LPE_LPE:#FF0000:4:Legislation, Privacy, and Ethics:Legislation, Privacy, and Ethics"></td>              
                 </tr>
               </tbody>
             </table>
@@ -470,8 +470,7 @@
         <div class="row buttonSubmit">
           <div class="col-md-12">
             <button class="btn btn-success btn-lg" @click="submit()">
-              Evaluate your Higher Education Institution 
-              regarding the maturity in adopting LA
+              Submit
             </button> 
           </div>
         </div>
@@ -493,6 +492,7 @@ export default {
     values: String,
     labels: String,
     colors: String,
+    categories: String,
     ids: String,
 
     idsArray: [],
@@ -539,10 +539,28 @@ export default {
     submit() {
 
       let self = this
-
-      console.log("submit")
-
       let message = 'Select the maturity level for each process area'
+
+      this.dM_DA  = this.dM_DA  == null ? "DM_DA:#008000:0:Data Acquisition:Data Management" : this.dM_DA;
+      this.dM_DQ  = this.dM_DQ  == null ? "DM_DQ:#008000:0:Data Quality:Data Management" : this.dM_DQ;
+      this.dM_DO  = this.dM_DO  == null ? "DM_DO:#008000:0:Data Ownership:Data Management" : this.dM_DO;
+      this.dM_INF = this.dM_INF == null ? "DM_INF:#008000:0:Infrastructure:Data Management" : this.dM_INF;
+
+      this.aT_FUN = this.aT_FUN == null ? "AT_FUN:#FFF000:0:Funding:Administration and Training" : this.aT_FUN;
+      this.aT_LEA = this.aT_LEA == null ? "AT_LEA:#FFF000:0:Leadership:Administration and Training" : this.aT_LEA;
+      this.aT_SII = this.aT_SII == null ? "AT_SII:#FFF000:0:Stakeholders’ Identification and Involvement:Administration and Training" : this.aT_SII;
+      this.aT_COM = this.aT_COM == null ? "AT_COM:#FFF000:0:Communication:Administration and Training" : this.aT_COM;
+      this.aT_ST  = this.aT_ST  == null ? "AT_ST:#FFF000:0:Stakeholders’ Training:Administration and Training" : this.aT_ST;      
+ 
+      this.pS_PPS = this.pS_PPS == null ? "PS_PPS:#800080:0:Pedagogical Planning of Solutions:Pedagogical Support" : this.pS_PPS;
+      this.pS_SIR = this.pS_SIR == null ? "PS_SIR:#800080:0:Support in Interpreting Results:Pedagogical Support" : this.pS_SIR;
+      this.pS_RI  = this.pS_RI  == null ? "PS_RI:#800080:0:Result-based Intervention:Pedagogical Support" : this.pS_RI;
+
+      this.dA_DOS = this.dA_DOS == null ? "DA_DOS:#0000FF:0:Development of Own Solutions:Data Analysis" : this.dA_DOS;
+      this.dA_ARS = this.dA_ARS == null ? "DA_ARS:#0000FF:0:Acquisition of Ready-made Solutions:Data Analysis" : this.dA_ARS;
+      this.dA_EES = this.dA_EES == null ? "DA_EES:#0000FF:0:Evaluating the Effectiveness of Solutions:Data Analysis" : this.dA_EES;
+
+      this.lPE_LPE = this.lPE_LPE == null ? "LPE_LPE:#FF0000:0:Legislation, Privacy, and Ethics:Legislation, Privacy, and Ethics" : this.lPE_LPE;
 
       if ( this.dM_DA== null || this.dM_DQ== null || 
            this.dM_DO== null || this.dM_INF== null || 
@@ -553,7 +571,7 @@ export default {
            this.dA_DOS== null || this.dA_ARS== null || 
            this.dA_EES== null || this.lPE_LPE== null ) {
             this.$root.$emit('Notification::show', {message, type: 'danger'})
-           return
+            return
       }
 
       if ( this.institutionName == "" ) {
@@ -568,6 +586,7 @@ export default {
       this.labels= ""
       this.colors= ""
       this.ids   = ""
+      this.categories= ""
 
       let ind= 0;
 
@@ -577,6 +596,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]  
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2] 
       }
@@ -585,6 +605,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]          
       }
@@ -593,6 +614,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]             
       }
@@ -601,6 +623,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]         
       }    
@@ -611,6 +634,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]       
       }    
@@ -619,6 +643,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]            
       }    
@@ -627,6 +652,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]          
       }          
@@ -635,6 +661,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]         
       }    
@@ -643,6 +670,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]  
       }    
@@ -653,6 +681,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]         
       }    
@@ -661,6 +690,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]        
       }    
@@ -669,6 +699,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]         
       }  
@@ -678,7 +709,8 @@ export default {
         this.dArray= this.dA_DOS.split(":")
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
-        this.colors= this.colors +";"+ this.dArray[1]   
+        this.colors= this.colors +";"+ this.dArray[1]    
+        this.categories= this.categories +";"+ this.dArray[4]   
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]            
       }
@@ -687,6 +719,7 @@ export default {
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
         this.colors= this.colors +";"+ this.dArray[1]   
+        this.categories= this.categories +";"+ this.dArray[4]    
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]                 
       }
@@ -694,7 +727,8 @@ export default {
         this.dArray= this.dA_EES.split(":")
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
-        this.colors= this.colors +";"+ this.dArray[1]   
+        this.colors= this.colors +";"+ this.dArray[1]    
+        this.categories= this.categories +";"+ this.dArray[4]   
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]        
       }  
@@ -704,7 +738,8 @@ export default {
         this.dArray= this.lPE_LPE.split(":")
         this.values= this.values +";"+ this.dArray[2]
         this.labels= this.labels +";"+ this.dArray[3]  
-        this.colors= this.colors +";"+ this.dArray[1]   
+        this.colors= this.colors +";"+ this.dArray[1]    
+        this.categories= this.categories +";"+ this.dArray[4]   
         this.idsArray[ind]  = this.dArray[0]    
         this.valArray[ind++]= this.dArray[2]           
       }
@@ -712,7 +747,9 @@ export default {
       this.values= this.values.substring(1, this.values.length)
       this.labels= this.labels.substring(1, this.labels.length)
       this.colors= this.colors.substring(1, this.colors.length)
+      this.categories= this.categories.substring(1, this.categories.length)
 
+      // Create array of values for save in database
       let x;
       let aItems= [];
       for (x = 0; x < this.idsArray.length; x++) {
@@ -730,13 +767,15 @@ export default {
       })
       .then(function() {
         // Prepara os dados para exibicao
-        console.log(self.institutionName)
+        //console.log(self.institutionName)
+        //console.log(self.categories)
         router.push({ name: 'graphic', params: { 
           pLabels: self.labels, 
           pValues: self.values,
           pInstitution: self.institutionName, 
           pYourPosition: self.yourPosition,
-          pColors: self.colors
+          pColors: self.colors,
+          pCategories: self.categories
         } }) 
       })
       .catch(function(error) {

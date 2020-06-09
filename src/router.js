@@ -21,7 +21,7 @@ const routes = [
     props: true
   },
   {
-    path: '/graphic/:pLabels/:pValues/:pInstitution/:pYourPosition/:pColors',
+    path: '/graphic/:pLabels/:pValues/:pInstitution/:pYourPosition/:pColors/:pCategories',
     name: 'graphic',
     component:  () => import('./pages/Graphic.vue'),
     props: true

@@ -11,12 +11,23 @@
       </div>
     </section>      
     <section>
-      <VueApexCharts type="radar" width="100%" 
+      <VueApexCharts type="radar" width="100%"
         :options="options" 
         :series="series">
       </VueApexCharts>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button v-for="(category, i) in getCategories()" :key="'A'+i"
+          type="button" class="btn btn-dark" 
+          :style="getColor(i)">
+          {{category}}
+        </button>
+      </div>
+       
+     <div style="text-align: center; margin-bottom: 30px">
       <button type="button" @click="newSearch()" 
         class="btn btn-success btn-lg divButton">New search</button>
+      </div>  
   </section>          
 </div>
 </template>
@@ -35,17 +46,18 @@ export default {
     pLabels: String, 
     pValues: String,
     pColors: String,
+    pCategories: String,
     pInstitution: String,
     pYourPosition: String
   },  
   data: function() {
-//   console.log("data()")
-//    console.log( this.pInstitution )
-//    console.log( this.pYourPosition )
-//    console.log( this.pLabels )
-//    console.log( this.pValues )
-//    console.log( this.pColors )
-
+/*    console.log("data()")
+    console.log( this.pInstitution )
+    console.log( this.pYourPosition )
+    console.log( this.pLabels )
+    console.log( this.pValues )
+    console.log( this.pColors )
+*/
     let aColors= this.pColors.split(";");
     let discretes= [aColors.length];
 
@@ -61,7 +73,6 @@ export default {
         } ;   
       discretes[ind]= disc;
     }
-//    console.log( discretes );
 
     return {
       series: [{
@@ -109,7 +120,7 @@ export default {
         chart: {
           type: 'radar',
           id: 'graphic-radar',
-          height: 700,
+          height: '700px',
           dropShadow: {
             enabled: true,
             blur: 1,
@@ -169,13 +180,41 @@ export default {
   methods: {
     newSearch() {
       router.push({ name: 'form' })
-    }    
+    },
+    getCategories() {
+      //console.log(this.getArrayWithoutRepetition(this.pCategories))
+      return this.getArrayWithoutRepetition(this.pCategories)
+    },      
+    getColor: function (idx) {
+      let aColors= this.getArrayWithoutRepetition(this.pColors)
+      return "background-color: "+ aColors[idx]+"; color:#FFF"
+    },
+    getArrayWithoutRepetition: function (text) {
+      //console.log(text)
+      let x
+      let idx= 0
+      let aReturn= []
+      let aValue= []
+      let entitySel= ""
+
+      aValue= text.split(";")
+      //console.log(aValue)
+      for (x = 0; x < aValue.length; x++) {
+        //console.log( entitySel +"!="+ aValue[x] )
+        if ( entitySel != aValue[x] ) {
+          aReturn[idx++] =  aValue[x];  
+          entitySel= aValue[x]    
+        }   
+      }      
+      return aReturn
+    },
   }
 }
 </script>
 
 <style scoped>
 .divButton {
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
