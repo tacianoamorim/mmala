@@ -15,7 +15,7 @@
     <section>
      <div class="container">
       <h1 class="title">Search form</h1>
-      <form class="was-validated">
+      <form @submit.prevent="submit">
         <div class="row">
           <div class="col-md-12">
             <h3>Inform your Higher Education Institution and your 
@@ -469,9 +469,7 @@
 
         <div class="row buttonSubmit">
           <div class="col-md-12">
-            <button class="btn btn-success btn-lg" @click="submit()">
-              Submit
-            </button> 
+            <input type="submit" value="Submit" class="btn btn-success btn-lg">  
           </div>
         </div>
       </form>
