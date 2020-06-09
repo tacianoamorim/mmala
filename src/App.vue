@@ -8,23 +8,21 @@
       <nav id="menuHeader">
         <div class="container">
           <div class="row">
-            <div class="col-2"><router-link to="/"><img src="./assets/img/logo.png" height="50" width="200"></router-link>  </div>
+            <div class="col-3"><router-link to="/"><img src="./assets/img/logo.png" height="50" width="200"></router-link>  </div>
             <div class="col-2">
-            </div>
-            <div class="col-3">
               <router-link to="/model/DM" class="btn btn-info btn-sm top" 
                 style="background-color: #6B7A8F;">Discover MMALA</router-link>              
             </div>
-            <div class="col-5">
+            <div class="col-7">
               <router-link to="/form" class="btn btn-info btn-sm top" 
-                style="background-color: #6B7A8F;">Evaluate your Organization</router-link>
+                style="background-color: #6B7A8F;">Evaluate your Higher Education Institution 
+              regarding the maturity in adopting LA</router-link>
             </div>                   
           </div>
         </div> 
       </nav>
       <router-view/>
     </main>    
-
   </div>
 </template>
 
