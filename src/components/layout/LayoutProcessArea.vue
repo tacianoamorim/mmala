@@ -24,7 +24,7 @@
                   </ul>
                 </span>
 
-                <span class="label">Related Processes Areas: </span><br>
+                <span class="label">Related Process Areas: </span><br>
                 <span class="text">
                   <ul>
                     <li v-for="(relatedProcessArea, i) in processAera.relatedProcessesAreas" :key="'rPA'+i">

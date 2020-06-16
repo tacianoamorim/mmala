@@ -14,7 +14,7 @@
     </section>
     <section>
      <div class="container">
-      <h1 class="title">Search form</h1>
+
       <form @submit.prevent="submit">
         <div class="row">
           <div class="col-md-12">

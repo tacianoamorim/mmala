@@ -76,7 +76,7 @@ export default {
 
     return {
       series: [{
-        name: 'Maturity',
+        name: 'Maturity level',
         data: this.pValues.split(";")
       }],
       options: {
