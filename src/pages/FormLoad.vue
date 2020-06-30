@@ -75,6 +75,14 @@ export default {
       this.category.order= 5
       this.categories[idx++]= this.category      
 
+/*      // ----------------------------------------------------------------
+      this.category= new Object
+      this.category.id= "TLA"
+      this.category.description= "TLAA"
+      this.category.color= "#000000"
+      this.category.order= 6
+      this.categories[idx++]= this.category      
+*/
       let x;
       console.log("Categories:")
       for (x = 0; x < this.categories.length; x++) {
@@ -209,7 +217,11 @@ export default {
         "Data Acquisition Plan; and",
         "Specification of the data access authorization process."        
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Identification and access to data sources;",
+        "Data acquisition under previously defined ethical and privacy criteria; and",
+        "Assessment of data acquisition costs."        
+      ]
       this.processArea.relatedProcessesAreas= [
         "Legislation, Privacy, and Ethics: It contains guidelines for defining criteria"
           +" for the ethical use of data, guaranteeing the privacy of teachers and"
@@ -322,7 +334,11 @@ export default {
         "Documents that formalize the Data Quality team and their responsibilities;"
           +" and Reports on data quality problem-solving."
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Definition of criteria and execution of quality assessment;",
+        "Execution of activities aiming at improving the quality of stored data (such as data cleaning); and",
+        "Definition of people responsible for data quality;"
+      ]
       this.processArea.relatedProcessesAreas= [
         "Data Acquisition: It defines data acquisition priorities, which should also"
           +" have priority in tasks related to data quality."
@@ -415,7 +431,11 @@ export default {
       this.processArea.level04WorkProducts= [
         "Specification of the Data Ownership Policy."
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Definition of criteria in order to establish data owners;",
+        "Inform which data are stored for LA projects and how they are analyzed; and",
+        "Access permission to data that the participants of projects have ownership over. "       
+      ]
       this.processAreas[idx++]= this.processArea
 
       // ----------------------------------------------------------------
@@ -527,7 +547,13 @@ export default {
       this.processArea.level04WorkProducts= [
         "IT Infrastructure Evolution Policy and Plan."
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Management of IT resources to allow LA projects scale-up;",
+        "Technical support for researchers and users of LA projects;",
+        "Establishment of processes and criteria for hosting LA projects and storing their data;",
+        "Establishment of an architecture for LA projects; and",
+        "Assurance of security and privacy of students’ data.    "     
+      ]
       this.processAreas[idx++]= this.processArea
      
      // ----------------------------------------------------------------
@@ -606,7 +632,12 @@ export default {
         "Specification of the LA Financing Program.;",
         "Reports on financial impacts of LA Program."        
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Provisioning of resources for LA projects;",
+        "Definition of priorities for financing LA projects;",
+        "Providing financial support to the continuity of LA projects; and",
+        "Assessment of LA projects costs and their return to the Institution."        
+      ]
       this.processAreas[idx++]= this.processArea
      
      // ----------------------------------------------------------------
@@ -677,7 +708,10 @@ export default {
         "Documents that formalize the establishment of the management team and "
         +"their responsibilities;"
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Establishment of leadership for the LA projects and program; and",
+        "Coordinated execution of LA projects in the Institution."        
+      ]
       this.processAreas[idx++]= this.processArea
 
       // ----------------------------------------------------------------
@@ -738,7 +772,10 @@ export default {
         "Specification of the Stakeholder Involvement Policy; and",
         "Specification of feedbacks from stakeholders."
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Identification of relevant stakeholders for the LA program; and",
+        "Encouraging stakeholder’s participation in LA projects."
+      ]
       this.processAreas[idx++]= this.processArea     
       
       // ----------------------------------------------------------------
@@ -803,7 +840,11 @@ export default {
         "Scientific articles, lectures, interviews, advertising banners; and",
         "Sales Plan specification."
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Dissemination of LA as a research field;",
+        "Promotion of the LA institutional program emphasizing its objectives and results; and",
+        "Improvement of both the projects and policies by Institution members’ feedback. "
+      ]
       this.processAreas[idx++]= this.processArea         
 
       // ----------------------------------------------------------------
@@ -860,7 +901,12 @@ export default {
       this.processArea.level04WorkProducts= [
         "Presentations on laws and institutional rules, resolutions, and policies on the use of LA; and Training material for data interpretation. "       
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Providing training for students to use LA tools;",
+        "Providing  training for teachers to use LA tools and interpret data;",
+        "Providing training for the IT team to manage both the data and infrastructure for the execution of LA projects; and",
+        "Providing training for stakeholders on Learning Analytics institutional policies."
+      ]
       this.processAreas[idx++]= this.processArea  
 
       // ----------------------------------------------------------------
@@ -921,7 +967,12 @@ export default {
         "Specification of pedagogical guidelines for the development of LA tools; and",
         "Reports identifying suggestions for improving the tools.  "      
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Consideration of pedagogical aspects in LA solutions planning;",
+        "Involvement of an educational team in the LA projects planning process;",
+        "Pedagogical support for teachers and students regarding the use of LA tools; and",
+        "Monitoring of LA solutions to assess whether they reach their pedagogical goals."
+      ]
       this.processAreas[idx++]= this.processArea 
 
       // ----------------------------------------------------------------
@@ -976,7 +1027,11 @@ export default {
         "Specification of guidelines for data interpretation. ",
         "Specification and publication of data interpretation models."
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Definition of legal, ethical and privacy criteria for carrying out pedagogical interventions;",
+        "Support for expanding pedagogical interventions; and",
+        "Involvement of a pedagogical team in the planning and execution of interventions."
+      ]
       this.processAreas[idx++]= this.processArea 
 
       // ----------------------------------------------------------------
@@ -1046,7 +1101,11 @@ export default {
         "Reports that certify that the pedagogical interventions carried out on "
         +"projects follow the Data Use Policy."
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Definition of legal, ethical and privacy criteria for carrying out pedagogical interventions;",
+        "Support for expanding pedagogical interventions; and",
+        "Involvement of a pedagogical team in the planning and execution of interventions."        
+      ]
       this.processAreas[idx++]= this.processArea 
 
       // ----------------------------------------------------------------
@@ -1146,7 +1205,11 @@ export default {
         "Specification of the Impact Analysis Policy; and ",
         "Sales Plan for LA tools specification. "
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Development of solutions that meet the Institution and relevant stakeholders’ needs;",
+        "Support for improvement and evolution of the complexity level of the LA solutions; and",
+        "Involvement of different departments and professionals in the design and development of LA solutions."
+      ]
       this.processAreas[idx++]= this.processArea       
 
       // ----------------------------------------------------------------
@@ -1257,7 +1320,12 @@ export default {
         +"the tools; and ",
         "Specification of the LA Solutions Acquisition Process. "
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Acquisition of tools for LA according to the institution needs and objectives;",
+        "Involvement of key stakeholders in the process of tool acquisition;",
+        "Definition of requirements for acquisition and criteria for acceptance of the tools; and",
+        "Evaluation of costs involved in purchasing tools."
+      ]
       this.processAreas[idx++]= this.processArea   
 
       // ----------------------------------------------------------------
@@ -1343,7 +1411,11 @@ export default {
         "Reports on the long-term evaluation of LA solutions; and ",
         "Specification of standard methods for evaluating solutions. "
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Definition of criteria and assessment means for the solutions;",
+        "Standardization of procedures for assessing the effectiveness of LA solutions; and",
+        "Adoption of tools that have undergone evaluation procedures"
+      ]
       this.processAreas[idx++]= this.processArea  
 
       // ----------------------------------------------------------------
@@ -1466,10 +1538,66 @@ export default {
         "Report on the evaluation of the LA projects’ execution concerning"
         +" compliance with the Data Use Policy."      
       ]
-      this.processArea.questions= []
+      this.processArea.questions= [
+        "Compliance of LA projects with laws and the Institution resolutions and rules;",
+        "Establishment of an Ethics Committee to evaluate LA projects; and",
+        "Specification of a Data Use Policy at the Institution."
+      ]
       this.processAreas[idx++]= this.processArea 
 
-      console.log("ProcessAreas:")
+/*      // ----------------------------------------------------------------
+      this.processArea= new Object
+      this.processArea.id= "TLA-ALO"
+      this.processArea.category= "TLA"
+      this.processArea.description= "A.L.O."
+      this.processArea.purpose= "To support the"
+      this.processArea.relatedProcessesAreas= [
+        "Data Acquisition, Data Ownership, Infrastructure, Communication, "
+      ]
+      this.processArea.goals= [
+        "To support the specification of a Data Use Policy at the Institution. "         
+      ]
+      this.processArea.level01= [
+        "LEP1.1. LA projects comply with the laws related to their execution. " 
+          +" in the UK, the 1998 Data Protection Act. "      
+      ]
+      this.processArea.level01Examples= []
+      this.processArea.level01WorkProducts= [
+        "Reports attesting the projects’ compliance with the current legislation.  "        
+      ]
+      this.processArea.level02= [
+        "LEP2.1. LA projects comply with the Institution’s internal policies that influence " 
+          +" its execution."
+      ]
+      this.processArea.level02Examples= []
+      this.processArea.level02WorkProducts= [
+        "Reports attesting the compliance of projects with the Institution internal " 
+          +"policies. "
+      ]
+      this.processArea.level03= [
+        "LEP3.4. The Ethics Committee can investigate and resolve complaints received " 
+          +"through the ombudsman.  "          
+      ]
+      this.processArea.level03Examples= []
+      this.processArea.level03WorkProducts= [
+        "Evaluation reports from the Ethics Committee about LA projects. "
+      ]
+      this.processArea.level04= [
+        "LEP4.3. The Ethics Committee evaluates the execution of the LA projects,"
+        +" if any."      
+      ]
+      this.processArea.level04Examples= []
+      this.processArea.level04WorkProducts= [
+        "Report on the evaluation of the LA projects’ execution concerning"
+        +" compliance with the Data Use Policy."      
+      ]
+      this.processArea.questions= [
+        "Specification of a Data Use Policy at the LOA."
+      ]
+      this.processAreas[idx++]= this.processArea       
+*/
+//      console.log("ProcessAreas:")
+
       for (x = 0; x < this.processAreas.length; x++) {
         let entity= this.processAreas[x]
         db.collection("processAreas").doc(entity.id).set(entity)

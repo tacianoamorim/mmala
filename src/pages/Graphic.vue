@@ -24,7 +24,7 @@
         </button>
       </div>
        
-     <div style="text-align: center; margin-bottom: 30px">
+      <div style="text-align: center; margin-bottom: 30px">
       <button type="button" @click="newSearch()" 
         class="btn btn-success btn-lg divButton">New search</button>
       </div>  

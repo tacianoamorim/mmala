@@ -124,7 +124,6 @@
       </div>      
     </section>
 
-
     <section id="maturityLevels">
       <h1 class="label darkLight">Maturity Levels</h1>
       <div style="text-align: center;">

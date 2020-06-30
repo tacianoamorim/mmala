@@ -59,7 +59,7 @@ import LayoutProcessArea from '../components/layout/LayoutProcessArea'
 import db from '../firebase'
 
 export default {
-  name: "nodel",
+  name: "model",
   components: {
     LayoutProcessArea
   },   
