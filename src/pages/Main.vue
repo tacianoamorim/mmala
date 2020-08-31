@@ -52,7 +52,7 @@
                   </td>
                 </tr>    
                 <tr>
-                  <td>Administration and Training</td>
+                  <td>Governance and Training</td>
                   <td>
                     <ul>
                       <li>Funding (FUN)</li>
@@ -68,7 +68,7 @@
                   <td>
                     <ul>
                       <li>Pedagogical planning of solutions (PPS)</li>
-                      <li>Support in Interpreting Results (SIR)</li>
+                      <li>Support for Interpreting Results (SIR)</li>
                       <li>Result-based Intervention(RBI)</li>
                     </ul>
                   </td>

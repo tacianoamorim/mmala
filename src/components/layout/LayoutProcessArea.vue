@@ -34,20 +34,20 @@
                 </span>
                 <LayoutMaturityLevel tCard="danger"  nLevel="1" dLevel="Ad hoc"
                   :tLevel="processAera.level01" 
-                  :tWork="processAera.level01Examples" 
-                  :tExample="processAera.level01WorkProducts"/>
+                  :tExample="processAera.level01Examples" 
+                  :tWork="processAera.level01WorkProducts"/>
                 <LayoutMaturityLevel tCard="warning" nLevel="2" dLevel="Initial" 
                   :tLevel="processAera.level02" 
-                  :tWork="processAera.level02Examples" 
-                  :tExample="processAera.level02WorkProducts"/>
+                  :tExample="processAera.level02Examples" 
+                  :tWork="processAera.level02WorkProducts"/>
                 <LayoutMaturityLevel tCard="primary" nLevel="3" dLevel="Structured" 
                   :tLevel="processAera.level03" 
-                  :tWork="processAera.level03Examples" 
-                  :tExample="processAera.level03WorkProducts"/>
+                  :tExample="processAera.level03Examples" 
+                  :tWork="processAera.level03WorkProducts"/>
                 <LayoutMaturityLevel tCard="success" nLevel="4" dLevel="Systematic" 
                   :tLevel="processAera.level04" 
-                  :tWork="processAera.level04Examples" 
-                  :tExample="processAera.level04WorkProducts"/>
+                  :tExample="processAera.level04Examples" 
+                  :tWork="processAera.level04WorkProducts"/>
               </p>
             </div>
           </div>
